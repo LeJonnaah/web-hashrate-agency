@@ -8,7 +8,9 @@ function mobileMenu() {
     navMenu.classList.toggle("active");
 }
 
-var flkty = new Flickity( '.main-gallery', {
-    cellAlign: 'left',
-    contain: true
+var flkty = new Flickity( '.gallery', {
+    contain: true,
+    prevNextButtons: false,
+    freeScroll: true,
+    autoPlay: 3000
 });
