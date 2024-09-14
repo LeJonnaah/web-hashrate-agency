@@ -33,6 +33,12 @@ body {
     height: 100vh;
 }
 
+h2 {
+    background: url('../img/title-background.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 h1 {
     display: none;
 }
@@ -137,6 +143,15 @@ h2>span {
 h3 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    /* text-transform: uppercase; */
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.header__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
     text-transform: uppercase;
     margin-top: 20px;
     font-weight: 400;
@@ -179,7 +194,6 @@ header {
 
 .main__title {
     text-align: center;
-    text-transform: uppercase;
     font-family: 'Quantico', sans-serif;
     font-weight: 700;
     font-size: 2.5rem;
@@ -242,13 +256,15 @@ header {
 }
 
 .enterprises__container {
-    margin-top: 20px;
+    margin-top: 50px;
     background: #D08AFF33;
-    border: 1px solid #FFFFFFE5;
+    border: 5px solid #D08AFF1A;
+    border-left: none;
+    border-right: none;
 }
 
 .images__container {
-    margin: 300px 0;
+    margin: 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -266,7 +282,8 @@ header {
     position: relative;
 }
 
-.our-mission__title {
+.our-mission__title,
+.our-services__title {
     text-align: center;
     text-transform: uppercase;
     font-family: 'Quantico', sans-serif;
@@ -275,7 +292,10 @@ header {
     margin: 0;
     align-self: flex-start;
     position: relative;
+    flex: 50%;
 }
+
+
 
 .our-mission__title>a {
     text-decoration: none;
@@ -286,9 +306,11 @@ header {
     left: 40px;
 }
 
-.our-mission__paragraph {
+.our-mission__paragraph,
+.our-services__paragraph {
     padding-top: 10px;
     margin-left: 5px;
+    flex: 50%;
 }
 
 .our-mission__text-container,
@@ -298,7 +320,6 @@ header {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-top: 50px;
 }
 
 .our-mission__text:first-child {
@@ -320,7 +341,6 @@ header {
 .our-mission__text {
     margin-top: 25px;
     color: #CFD0D0;
-    font-weight: 700;
     font-size: 0.7rem;
 }
 
@@ -391,11 +411,11 @@ header {
     font-family: 'Quantico', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
 #mcpay>h3 {
-    text-align: left;
-    margin-bottom: 30px;
+    margin: auto;
 }
 
 .our-services__title>span {
@@ -458,6 +478,8 @@ form {
     border: 4px solid #BCA3FF;
     border-radius: 50px;
     height: 800px;
+    position: relative;
+    top: 40px;
 }
 
 label {
@@ -492,11 +514,6 @@ select {
     /* Estilo cuando está seleccionado */
     background-color: #4CAF50;
     border-color: #4CAF50;
-}
-
-.required:after {
-    content: "*";
-    color: red;
 }
 
 .options {
@@ -553,9 +570,7 @@ footer {
     color: #000;
     padding: 20px;
     text-align: center;
-    height: 900px;
-    position: relative;
-    bottom: 42px;
+    height: 1000px;
 }
 
 footer *>h4 {
@@ -576,7 +591,7 @@ footer *>a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 100px;
 }
 
 .column {
@@ -585,7 +600,13 @@ footer *>a {
     padding: 0 10px;
 }
 
+.li {
+    margin-top: 20px;
+}
 
+.footer-logo {
+    margin-top: 50px;
+}
 
 
 
@@ -623,8 +644,70 @@ footer *>a {
         display: block;
     }
 
+    h3 {
+        font-size: 3.5rem;
+        width: 80%;
+        margin: 50px auto 0;
+    }
+
+    .main__title {
+        font-size: 3rem;
+    }
+
+    .header__subtitle {
+        font-size: 4rem;
+    }
+
+    .header__anchor {
+        font-size: 1.5rem;
+        width: 300px;
+        height: auto;
+        text-align: center;
+    }
+
+    #down-arrow {
+        width: auto;
+        height: 50px;
+    }
+
+    .our-mission__title,
+    .our-services__title {
+        font-size: 6rem;
+    }
+
+    .our-mission__text,
+    .our-services__paragraph {
+        font-size: 1.3rem;
+    }
+
+    .our-mission__text-container,
+    .our-services__text-container {
+        margin: 50px;
+    }
+
+    .our-services__container {
+        display: flex;
+    }
+
+    .our-services__title-members {
+        font-size: 3rem;
+    }
+    
     .gallery-cell {
         width: 50%;
+    }
+
+    form {
+        max-width: 700px;
+    }
+
+    footer {
+        height: 500px;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        align-items: flex-start;
     }
 
 }
