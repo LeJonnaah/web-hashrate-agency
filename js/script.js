@@ -12,5 +12,5 @@ var flkty = new Flickity( '.gallery', {
     contain: true,
     prevNextButtons: false,
     freeScroll: true,
-    autoPlay: true
+    // autoPlay: true
 });
