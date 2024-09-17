@@ -176,7 +176,9 @@ header {
 }
 
 .header__decoration {
-    width: 40%;
+    width: 30%;
+    margin: auto;
+    max-width: 200px;
 }
 
 .header__anchor {
@@ -187,7 +189,7 @@ header {
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
-    width: 100px;
+    width: 150px;
     align-content: center;
 
 }
@@ -309,13 +311,14 @@ header {
 
 
 
-.our-mission__title>a {
+.our-mission__title > a {
     text-decoration: none;
     color: #BCA3FF;
     font-size: 1rem;
     position: absolute;
-    bottom: -50px;
+    bottom: -65px;
     left: 40px;
+    width: 77%;
 }
 
 .our-mission__paragraph,
@@ -427,6 +430,7 @@ header {
 
 .our-services__container {
     translate: 0 -60px;
+    /* height: 1000px; */
 }
 
 .our-services__separator {
@@ -437,7 +441,7 @@ header {
     height: 70px;
     width: 100%;
     position: relative;
-    bottom: 40px;
+    bottom: 30px;
     transform: rotateZ(-1deg);
     z-index: 2;
 }
@@ -473,12 +477,6 @@ header {
     margin: auto;
 }
 
-.our-services__title>span {
-    text-transform: none;
-    display: block;
-    font-size: 1.5rem;
-}
-
 .our-services__image {
     width: 100%;
 }
@@ -492,21 +490,28 @@ header {
 .our-services__title {
     font-weight: 700;
     font-family: 'Quantico', sans-serif;
-    font-size: 2.5rem;
+    font-size: 5.5rem;
     align-self: flex-start;
-    /* line-height: 2.5rem; */
-    text-align: left;
-
-    /* Espacio para trabajar */
+    text-align: right;
     margin-top: 0;
+}
+
+.our-services__title span {
+    text-transform: uppercase;
+    display: block;
+    font-size: 2.5rem;
+}
+
+.our-services__title-span {
+    text-transform: none !important;
 }
 
 .our-services__paragraph {
     color: #CFD0D0;
     font-weight: 400;
-    font-size: 0.7rem;
+    font-size: 1rem;
     align-self: flex-start;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 
 
@@ -529,7 +534,7 @@ header {
 #read-more {
     position: absolute;
     right: 40px;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 .more-doubts {
