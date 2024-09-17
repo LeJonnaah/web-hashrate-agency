@@ -84,6 +84,10 @@ nav a {
     font-size: 17px;
 }
 
+nav img {
+    margin-top: 15px;
+}
+
 nav a:hover {
     color: #fff;
     transition: 0.3s;
@@ -166,7 +170,7 @@ h3 {
 }
 
 header {
-    margin-top: 140px;
+    margin-top: 120px;
 }
 
 .header__container {
@@ -229,7 +233,7 @@ header {
 }
 
 .card {
-    max-width: 400px;
+    max-width: -webkit-fill-available;
     border-radius: 34px;
     padding: 0 20px;
     background: #40255b;
@@ -238,6 +242,7 @@ header {
 
 .card__image {
     padding: 20px;
+    max-width: -webkit-fill-available;
 }
 
 .card__logo {
@@ -302,8 +307,8 @@ header {
     font-family: 'Quantico', sans-serif;
     font-weight: 700;
     font-size: 2.5rem;
-    margin: 0;
-    max-width: 350px;
+    margin: auto;
+    max-width: 330px;
     align-self: flex-start;
     position: relative;
     flex: 50%;
@@ -345,7 +350,7 @@ header {
     position: absolute;
     width: 200px;
     bottom: -549px;
-    left: 30%;
+    left: 26%;
     z-index: -1;
 }
 
@@ -473,10 +478,6 @@ header {
     text-transform: uppercase;
 }
 
-#mcpay>h3 {
-    margin: auto;
-}
-
 .our-services__image {
     width: 100%;
 }
@@ -490,16 +491,18 @@ header {
 .our-services__title {
     font-weight: 700;
     font-family: 'Quantico', sans-serif;
-    font-size: 5.5rem;
+    font-size: 2.5rem;
     align-self: flex-start;
-    text-align: right;
+    text-align: left;
     margin-top: 0;
 }
 
 .our-services__title span {
     text-transform: uppercase;
     display: block;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-top: -6px;
 }
 
 .our-services__title-span {
@@ -509,11 +512,15 @@ header {
 .our-services__paragraph {
     color: #CFD0D0;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.8rem;
     align-self: flex-start;
-    padding-top: 30px;
 }
 
+.our-services__anchor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .our-services__anchor {
     text-transform: uppercase;
@@ -525,7 +532,8 @@ header {
     font-size: 1rem;
     font-weight: 700;
     padding: 10px 20px;
-    margin-top: 50px;
+    margin-top: 25px;
+    margin-left: 15px;
     display: block;
     text-align: center;
     width: 150px;
@@ -534,7 +542,11 @@ header {
 #read-more {
     position: absolute;
     right: 40px;
-    margin-top: 200px;
+    margin-top: 20px;
+}
+
+#what-type {
+    margin: 20px auto;
 }
 
 .more-doubts {
@@ -560,12 +572,15 @@ form {
     border-radius: 50px;
     height: 800px;
     position: relative;
-    top: 40px;
+    top: 140px;
+    z-index: -1;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
+    margin-left: 5px;
+    color: #fff;
 }
 
 input[type="text"],
@@ -577,6 +592,12 @@ select {
     margin-bottom: 15px;
     border: 1px solid #FFFFFF52;
     border-radius: 10px;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+select {
+    color: #f6e8ff;
 }
 
 .option input[type="checkbox"] {
@@ -630,6 +651,7 @@ button {
     border: 1px solid #FFFFFF52;
     border-radius: 10px;
     resize: none;
+    margin-top: 20px;
 }
 
 
@@ -668,7 +690,7 @@ footer *>a {
 
 .footer-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px auto 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -770,6 +792,7 @@ footer *>a {
     .our-mission__text,
     .our-services__paragraph {
         font-size: 1.3rem;
+        padding-top: 30px;
     }
 
     .our-mission__text-container,
@@ -787,12 +810,20 @@ footer *>a {
         display: flex;
     }
 
+    .our-services__image {
+        width: 80%;
+    }
+
     .our-services__title-members {
         font-size: 3rem;
     }
 
     .our-services__separator {
-        height: 113px;
+        height: 100px;
+    }
+
+    .our-services__container section {
+        height: 1100px;
     }
 
     .events__title {
@@ -817,15 +848,42 @@ footer *>a {
 
     form {
         max-width: 700px;
+        padding: 90px;
+        border-radius: 150px;
+
+    }
+
+    .form__inputs-group {
+        display: flex;
+        gap: 20px;
     }
 
     footer {
-        height: 500px;
+        height: 550px;
     }
 
     .footer-container {
         flex-direction: row;
         align-items: flex-start;
+    }
+
+    .footer-logo {
+        width: 400px;
+    }
+
+    
+    .footer__social-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .footer__social {
+        align-self: center;
+    }
+
+    .column {
+        text-align: left;
+        padding-left: 5%;
     }
 
 }

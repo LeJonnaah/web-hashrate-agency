@@ -370,7 +370,7 @@
 
                             <h3 class="our-services__title-members">Programa de miembros</h3>
 
-                            <a href="">
+                            <a href="" class="our-services__anchor-container">
                                 <img class="our-services__image" src="img/members/your-own-dom.png" alt="">
                                 <img class="our-services__image" src="img/members/assist.png" alt="">
                                 <img class="our-services__image" src="img/members/group.png" alt="">
@@ -387,7 +387,7 @@
 
                             <h3 class="our-services__title">MCPAY <span class="our-services__title-span">Plataforma de pagos</span></h3>
 
-                            <a href="">
+                            <a href="" class="our-services__anchor-container">
                                 <img class="our-services__image" src="img/mcpay/check.png" alt="">
                                 <img class="our-services__image" src="img/mcpay/comisions.png" alt="">
                                 <img class="our-services__image" src="img/mcpay/methods.png" alt="">
@@ -418,33 +418,32 @@
                         <p class="our-services__paragraph">En nuestro equipo siempre vamos a estar pensando en vos, y
                             por eso estamos dispuestos a brindarte <b>toda la información </b>de la mejor calidad y de
                             la manera más clara posible, por eso preparamos <b>una sección exclusiva </b>para que te
-                            saque todas las dudas. </p>
-
-
-                        <a class="our-services__anchor button-anchor" id="read-more" href="">Leer más →</a>
+                            saque todas las dudas. 
+                            <a class="our-services__anchor button-anchor" id="read-more" href="">Leer más →</a>
+                        </p>
 
                     </div>
 
                     <form>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name">
+                        <div class="form__inputs-group">
+                            <input type="text" placeholder="Name" id="name" name="name">
+                            <input type="email" placeholder="Bussiness email" id="email" name="email" required>
+                        </div>
 
-                        <label for="email" class="required">Business email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <div class="form__inputs-group">
+                            <select id="budget" name="budget">
+                                <option value="option1">Opción 1</option>
+                                <option value="option2">Opción 2</option>
+                            </select>
 
-                        <label for="budget" class="required">Your budget:</label>
-                        <select id="budget" name="budget">
-                            <option value="option1">Opción 1</option>
-                            <option value="option2">Opción 2</option>
-                        </select>
+                            <select id="video-time" name="video-time">
+                                <option value="option1">Opción 1</option>
+                                <option value="option2">Opción 2</option>
+                            </select>
+                        </div>
 
-                        <label for="video-time" class="required">Video time</label>
-                        <select id="video-time" name="video-time">
-                            <option value="option1">Opción 1</option>
-                            <option value="option2">Opción 2</option>
-                        </select>
 
-                        <label>What type</label>
+                        <label id="what-type">What type</label>
                         <div class="options">
                             <div class="option">
                                 <input type="checkbox" id="explainer" name="type" value="explainer">
