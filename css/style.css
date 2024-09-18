@@ -387,7 +387,7 @@ header {
 
 .events__text-container {
     display: flex;
-    margin: 50px auto;
+    margin: 50px auto 0;
 }
 
 .events__uranus {
@@ -452,7 +452,7 @@ header {
 }
 
 .our-services__separator--bottom {
-    bottom: 80px;
+    bottom: 90px;
 }
 
 #members-program {
@@ -475,6 +475,7 @@ header {
     font-family: 'Quantico', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 30px;
+    margin-left: 5%;
     text-transform: uppercase;
 }
 
@@ -495,6 +496,7 @@ header {
     align-self: flex-start;
     text-align: left;
     margin-top: 0;
+    margin-left: 5%;
 }
 
 .our-services__title span {
@@ -547,6 +549,12 @@ header {
 
 #what-type {
     margin: 20px auto;
+    width: 60%;
+}
+
+.form__inputs-type {
+    display: flex;
+    align-items: center;
 }
 
 .more-doubts {
@@ -570,10 +578,18 @@ form {
     padding: 20px;
     border: 4px solid #BCA3FF;
     border-radius: 50px;
-    height: 800px;
+    height: 750px;
     position: relative;
     top: 140px;
-    z-index: -1;
+    border-bottom: none;
+}
+
+.form__decoration {
+    position: absolute;
+    right: -30px;
+    top: 150px;
+    height: 120px;
+    display: none;
 }
 
 label {
@@ -645,6 +661,11 @@ button {
     margin: 50px auto;
 }
 
+.form__button-container {
+    display: flex;
+    align-items: center;
+}
+
 #message {
     width: 100%;
     background-color: #D08AFF33;
@@ -686,6 +707,11 @@ footer *>a {
     text-decoration: none;
     font-weight: 400;
     color: #000;
+}
+
+footer *>a:hover {
+    color: #fff;
+    transition: 0.3s ease-in-out;
 }
 
 .footer-container {
@@ -831,7 +857,7 @@ footer *>a {
     }
 
     .events__paragraph {
-        font-size: 1.5rem;
+        font-size: 2rem;
         width: 40%;
     }
 
@@ -846,16 +872,23 @@ footer *>a {
         width: 50%;
     }
 
+    .more-doubts__background {
+        translate: 0 -160px;
+    }
+
     form {
         max-width: 700px;
         padding: 90px;
         border-radius: 150px;
-
     }
 
     .form__inputs-group {
         display: flex;
         gap: 20px;
+    }
+
+    .form__decoration {
+        display: block;
     }
 
     footer {
@@ -886,6 +919,34 @@ footer *>a {
         padding-left: 5%;
     }
 
+}
+
+@media (min-width: 1920px) {
+
+    .enterprises__image {
+        max-width: 100%;
+    }
+
+    .events__title {
+        font-size: 7rem;
+    }
+
+    .events__paragraph {
+        font-size: 2.5rem;
+        width: 57%;
+    }
+
+    .our-services__separator {
+        height: 121px;
+    }
+
+    .more-doubts__background {
+        translate: 0 -180px;
+    }
+
+    form {
+        max-width: 60%;
+    }
 }
 
 
