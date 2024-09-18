@@ -141,6 +141,7 @@ h2 {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 4rem;
+    margin-bottom: 50px;
     -webkit-text-stroke: 1px #fff;
     -webkit-text-fill-color: transparent;
 }
@@ -155,7 +156,7 @@ h3 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     /* text-transform: uppercase; */
-    margin-top: 20px;
+    /* margin-top: 20px; */
     font-weight: 400;
     font-size: 2rem;
 }
@@ -234,29 +235,26 @@ header {
 
 .card {
     max-width: -webkit-fill-available;
-    border-radius: 34px;
-    padding: 0 20px;
+    border-radius: 25px;
     background: #40255b;
     border: 2px solid #FFFFFFCC;
 }
 
 .card__image {
-    padding: 20px;
+    padding: 10px;
     max-width: -webkit-fill-available;
 }
 
 .card__logo {
     width: 20%;
-}
-
-.card>img {
     float: left;
     border-radius: 50%;
     margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 .card__text {
-    margin: 0 22%;
+    margin: 0 29%;
 }
 
 .card__title {
@@ -267,6 +265,16 @@ header {
 .card__description {
     color: #979797;
     font-size: 1rem;
+}
+
+.enterprises__title {
+    text-transform: uppercase;
+    margin: 100px auto;
+    line-height: 70px;
+}
+
+.enterprises__title > span {
+    display: block;
 }
 
 .enterprises__container {
@@ -307,7 +315,7 @@ header {
     font-family: 'Quantico', sans-serif;
     font-weight: 700;
     font-size: 2.5rem;
-    margin: auto;
+    /* margin: auto; */
     max-width: 330px;
     align-self: flex-start;
     position: relative;
@@ -459,12 +467,14 @@ header {
     background-color: #F5F5F5;
     height: 100%;
     padding: 50px;
+    flex-basis: 50%;
 }
 
 #mcpay {
     background-color: #202020;
     height: 100%;
     padding: 50px;
+    flex-basis: 50%;
 }
 
 .our-services__title-members {
@@ -499,7 +509,7 @@ header {
     margin-left: 5%;
 }
 
-.our-services__title span {
+.our-services__title-span {
     text-transform: uppercase;
     display: block;
     font-size: 1.5rem;
@@ -507,8 +517,14 @@ header {
     margin-top: -6px;
 }
 
-.our-services__title-span {
-    text-transform: none !important;
+.our-services__title-span--more {
+    text-transform: uppercase;
+    display: block;
+}
+
+#span-plus {
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: transparent;
 }
 
 .our-services__paragraph {
@@ -578,7 +594,7 @@ form {
     padding: 20px;
     border: 4px solid #BCA3FF;
     border-radius: 50px;
-    height: 750px;
+    height: 1000px;
     position: relative;
     top: 140px;
     border-bottom: none;
@@ -603,11 +619,13 @@ input[type="text"],
 input[type="email"],
 select {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     background-color: #D08AFF33;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border: 1px solid #FFFFFF52;
-    border-radius: 10px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
 }
 
 input[type="text"]::placeholder,
@@ -650,7 +668,7 @@ button {
     color: white;
     padding: 3px 30px;
     font-family: 'quantico', sans-serif;
-    border-radius: 30px;
+    border-radius: 50px;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
@@ -668,6 +686,7 @@ button {
 
 #message {
     width: 100%;
+    height: 150px;
     background-color: #D08AFF33;
     border: 1px solid #FFFFFF52;
     border-radius: 10px;
@@ -675,18 +694,16 @@ button {
     margin-top: 20px;
 }
 
-
-
-
-
-
-
 .background__container-2 {
-    background-image: url("../img/BACKGROUND_2.png");
+    background-image: url(../img/BACKGROUND_2.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    height: 100%;
+    background-position: top;
+    height: 302px;
+    translate: 0 -200px;
+    z-index: -1;
+    width: 78%;
+    position: absolute;
 }
 
 footer {
@@ -694,7 +711,7 @@ footer {
     color: #000;
     padding: 20px;
     text-align: center;
-    height: 1050px;
+    height: 1100px;
 }
 
 footer *>h4 {
@@ -763,7 +780,7 @@ footer *>a:hover {
 
 
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
 
     nav a.contact {
         padding: 10px 20px;
@@ -774,12 +791,25 @@ footer *>a:hover {
         gap: 20px;
     }
 
+    .nav-logo {
+        margin-left: 50px;
+    }
+
     .nav-item__separator {
         display: block;
     }
 
     nav a div {
         display: block;
+    }
+
+    h2 {
+        font-size: 7rem;
+        background-size: 80%;
+    }
+
+    h2>span {
+        font-size: 5.6rem;
     }
 
     h3 {
@@ -789,10 +819,17 @@ footer *>a:hover {
     }
 
     .main__title {
-        font-size: 3rem;
-        text-transform: uppercase;
+        font-size: 4rem;
     }
 
+    .enterprises__title {
+        font-size: 4rem;
+    }
+    
+    .header__decoration {
+        margin: 0 70px;
+    }
+    
     .header__subtitle {
         font-size: 4rem;
     }
@@ -828,8 +865,15 @@ footer *>a:hover {
 
     #our-mission__rocket {
         width: 350px;
-        top: -56%;
-        left: 34%;
+        top: -48%;
+        left: 32%;
+    }
+
+    .our-mission__title > a {
+        bottom: -82px;
+        left: 104px;
+        font-size: 2rem;
+        max-width: 500px;
     }
 
     .our-services__container {
@@ -850,10 +894,6 @@ footer *>a:hover {
 
     .our-services__container section {
         height: 1100px;
-    }
-
-    .events__title {
-        font-size: 5rem;
     }
 
     .events__paragraph {
@@ -923,17 +963,101 @@ footer *>a:hover {
 
 @media (min-width: 1920px) {
 
+    .nav-logo {
+        margin-left: 100px;
+    }
+
+    h2 {
+        background-size: 55%;
+        background-position-y: 60px;
+    }
+
+    .header__subtitle {
+        max-width: 50%;
+    }
+
+    .main__title {
+        font-size: 4rem;
+    }
+
+    .header__decoration {
+        margin: 0 50px;
+        max-width: 200px;
+    }
+
+    .enterprises__title {
+        font-size: 5rem;
+    }
+
     .enterprises__image {
         max-width: 100%;
     }
 
     .events__title {
-        font-size: 7rem;
+        font-size: 6rem;
+    }
+
+    .events__uranus {
+        translate: 0 -210px;
     }
 
     .events__paragraph {
         font-size: 2.5rem;
-        width: 57%;
+        width: 55%;
+    }
+
+    .our-services__title-members {
+        margin-left: 15%;
+        margin-bottom: 50px;
+        font-size: 5rem;
+    }
+
+    .our-mission__title {
+        max-width: 1000px;
+        font-size: 8rem;
+    }
+
+    .our-mission__text:first-child {
+        margin-top: 10px;
+    }
+
+    .our-services__title {
+        max-width: 900px;
+        margin-left: 13%;
+        font-size: 10rem;
+    }
+
+    .our-services__title-span {
+        font-size: 3rem;
+        margin-top: -31px;
+    }
+    
+    .our-services__text-container {
+        margin: 400px auto 100px;
+    }
+
+    .our-services__anchor {
+        width: 270px;
+        font-size: 2rem;
+        margin-left: 100px;
+        margin-bottom: 70px;
+    }
+
+    #our-mission__rocket {
+        width: 390px;
+        top: -18%;
+        left: 35%;
+    }
+
+    .our-mission__text, .our-services__paragraph {
+        font-size: 2rem;
+        line-height: 50px;
+    }
+
+    .our-mission__title > a {
+        left: 314px;
+        max-width: 450px;
+        font-size: 2.2rem;
     }
 
     .our-services__separator {
@@ -945,7 +1069,36 @@ footer *>a:hover {
     }
 
     form {
-        max-width: 60%;
+        max-width: 50%;
+        padding: 120px;
+    }
+
+    .form__decoration {
+        height: 50px;
+        width: 50px;
+    }
+
+    button {
+        font-size: 4rem;
+    }
+
+    footer {
+        height: 650px;
+        font-size: 1.5rem;
+    }
+
+    .footer__social-container {
+        margin-top: 0;
+    }
+
+    .footer-logo {
+        width: 550px;
+    }
+
+    .footer__social-link {
+        width: 100px;
+        height: 100px;
+        margin: 0 30px;
     }
 }
 
