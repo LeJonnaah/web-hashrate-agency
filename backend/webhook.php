@@ -3,7 +3,6 @@
 	// Handler para los webhooks de Discord, se encarga de enviar los mensajes.
 
 	function sendWebhookAllData($name, $email, $information) {
-		$webhook_url = "https://discord.com/api/webhooks/934939157657186314/_s6pDlzJN7998vxGuQX4oSKyjinTmTyvFQ6pwkaAk97ekoSmwtXgOb_rxzlfNNgrO_1V";
 
 		//=======================================================================================================
 		// Compose message. You can use Markdown
@@ -79,7 +78,6 @@
 	}
 
 	function sendWebhookMailOnly($email) {
-		$webhook_url = "https://discord.com/api/webhooks/934939157657186314/_s6pDlzJN7998vxGuQX4oSKyjinTmTyvFQ6pwkaAk97ekoSmwtXgOb_rxzlfNNgrO_1V";
 
 		//=======================================================================================================
 		// Compose message. You can use Markdown
