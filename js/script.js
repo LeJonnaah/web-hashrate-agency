@@ -8,9 +8,14 @@ function mobileMenu() {
     navMenu.classList.toggle("active");
 }
 
-var flkty = new Flickity( '.gallery', {
-    contain: true,
-    prevNextButtons: false,
-    freeScroll: true,
-    // autoPlay: true
-});
+try {
+    var flkty = new Flickity( '.gallery', {
+        contain: true,
+        prevNextButtons: false,
+        freeScroll: true,
+        // autoPlay: true
+    });
+    
+} catch (error) {
+    console.log(error);
+}

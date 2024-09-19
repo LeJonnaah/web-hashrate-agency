@@ -7,6 +7,10 @@
     <title>HASHRATE AGENCY</title>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- No JS? -->
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=https://duckduckgo.com/" />
+    </noscript>
 </head>
 
 <body>
@@ -23,7 +27,7 @@
             </a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="members-program.html">Programa de miembros</a>
+                    <a href="members-program.php">Programa de miembros</a>
                     <svg class="nav-item__separator" width="3" height="47" viewBox="0 0 3 47" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <line x1="1.5" y1="6.55671e-08" x2="1.5" y2="47" stroke="white" stroke-width="3" />
@@ -430,9 +434,7 @@
 
                     </div>
 
-
-
-                    <form>
+                    <form id="contact-form">
                         <div>
                             <svg class="form__decoration--line" width="191" height="730" viewBox="0 0 191 730" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -444,7 +446,7 @@
                         </div>
                         <div class="form__inputs-group">
                             <input type="text" placeholder="Name" id="name" name="name">
-                            <input type="email" placeholder="Bussiness email" id="email" name="email" required>
+                            <input type="email" placeholder="Bussiness email" id="email-contact" name="email-contact" required>
                         </div>
 
                         <div class="form__inputs-group">
@@ -516,7 +518,7 @@
                                     d="M19.5 0C23.8991 11.5352 27.4648 15.1013 39 19.5C27.4648 23.899 23.8991 27.4648 19.5 39C15.1011 27.4648 11.5352 23.899 0 19.5C11.5352 15.1013 15.1011 11.5352 19.5 0Z"
                                     fill="#BCA3FF" />
                             </svg>
-                            <button type="submit">Contactanos</button>
+                            <button type="submit" data-callback="onSubmitAllData" data-size="invisible" id="contact-form-button">Contactanos</button>
                             <svg width="25" height="25" viewBox="0 0 39 39" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -613,17 +615,104 @@
 
 
 
-    </body>
-
+        
     </div>
 
+    <?php
+        require('./backend/util.php');
+    ?>
+    
 
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js" integrity="sha512-pY1t/ADgTwbfGbw0+mRGd33EroA5YgRUWhQNFpPIAdBzyoSb38FsFrf4wBTcS3GFPdTfgtpRrbGCkdl2C2OXYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/sweetalert2.all.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/util.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="js/script.js"></script>
+    
 
-</html>
+<script>
+        function onSubmitMailOnly(token) {
+            let data = {
+                "contactForm": "false",
+                "mail": getValueOfElementById("email"),
+                "captcha": token,
+                "lang": "<?php echo $lang; ?>"
+            }
+            
+            waitMessage();
+            
+            sendForm(data);
+        }
+
+        function onSubmitAllData(token) {
+            let data = {
+                "contactForm": "true",
+                "name": getValueOfElementById("name"),
+                "mail": getValueOfElementById("email-contact"),
+                "information": getValueOfElementById("information"),
+                "captcha": token,
+                "lang": "<?php echo $lang; ?>"
+            }
+            
+            waitMessage();
+
+            sendForm(data);
+        }
+
+        function sendForm(data) {
+            $.ajax({
+                url: "./backend/forms-handler.php",
+                type: "POST",
+                data: data,
+                complete: function(response) {
+                    let code = response.responseJSON.code;
+
+                    if (code == 0) {
+                        <?php successForm(false) ?>
+                        return;
+                    }
+                    
+                    if (code == 1) {
+                        <?php invalidCaptcha(false) ?>
+                        return;
+                    }
+
+                    if (code == 2) {
+                        <?php invalidEmail(false) ?>
+                        return;
+                    }
+
+                    if (code == 3) {
+                        <?php invalidData(false) ?>
+                        return;
+                    }
+
+                    <?php unknownError(false) ?>
+                    return;
+                }
+            });
+        }
+
+        function waitMessage() {
+            let timerInterval
+            Swal.fire({
+                title: 'Enviando petición',
+                html: 'El sistema está verificando su información, por favor, aguarde unos instantes...',
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                willOpen: () => {
+                    Swal.showLoading()
+                    timerInterval = setInterval(() => {}, 100)
+                },
+                didClose: () => {
+                    clearInterval(timerInterval)
+                }
+            })
+        }
+    </script>
+
 </body>
 
 </html>
