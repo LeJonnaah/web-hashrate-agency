@@ -551,7 +551,7 @@ header {
     font-weight: 700;
     padding: 10px 20px;
     margin-top: 25px;
-    margin-left: 15px;
+    margin-left: 12%;
     display: block;
     text-align: center;
     width: 150px;
@@ -561,11 +561,12 @@ header {
     position: absolute;
     right: 40px;
     margin-top: 20px;
+    color: #fff;
 }
 
 #what-type {
     margin: 20px auto;
-    width: 60%;
+    width: 20%;
 }
 
 .form__inputs-type {
@@ -574,7 +575,7 @@ header {
 }
 
 .more-doubts {
-    margin-top: 150px;
+    margin-top: 200px;
 }
 
 .more-doubts__background {
@@ -590,14 +591,20 @@ header {
 
 form {
     max-width: 500px;
-    margin: 50px auto 0;
-    padding: 20px;
+    margin: 60px auto 0;
+    padding: 100px 20px;
     border: 4px solid #BCA3FF;
     border-radius: 50px;
-    height: 1000px;
+    height: 1100px;
     position: relative;
     top: 140px;
     border-bottom: none;
+}
+
+.form__decoration--line {
+    position: absolute;
+    top: -637px;
+    left: 28.5%;
 }
 
 .form__decoration {
@@ -619,7 +626,7 @@ input[type="text"],
 input[type="email"],
 select {
     width: 100%;
-    padding: 15px;
+    padding: 20px;
     background-color: #D08AFF33;
     margin-bottom: 20px;
     border: 1px solid #FFFFFF52;
@@ -656,6 +663,7 @@ select {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    max-width: 60%;
 }
 
 .option {
@@ -763,6 +771,11 @@ footer *>a:hover {
     width: 40px;
 }
 
+.footer__social-link:hover {
+    scale: 1.2;
+    transition: 0.3s ease-in-out;
+}
+
 
 
 
@@ -849,13 +862,21 @@ footer *>a:hover {
     .our-mission__title,
     .our-services__title {
         font-size: 6rem;
-        max-width: fit-content;
+        max-width: 46%;
+    }
+
+    .our-services__title {
+        margin-left: 15%;
     }
 
     .our-mission__text,
     .our-services__paragraph {
         font-size: 1.3rem;
         padding-top: 30px;
+    }
+
+    .our-services__paragraph:last-of-type {
+        font-size: 1.7rem;
     }
 
     .our-mission__text-container,
@@ -886,6 +907,11 @@ footer *>a:hover {
 
     .our-services__title-members {
         font-size: 3rem;
+        margin-left: 15%;
+    }
+
+    #read-more {
+        right: 15%;
     }
 
     .our-services__separator {
@@ -898,7 +924,7 @@ footer *>a:hover {
 
     .events__paragraph {
         font-size: 2rem;
-        width: 40%;
+        width: 53%;
     }
 
     .events__uranus {
@@ -913,13 +939,15 @@ footer *>a:hover {
     }
 
     .more-doubts__background {
+        background-size: cover;
         translate: 0 -160px;
     }
 
     form {
-        max-width: 700px;
-        padding: 90px;
+        max-width: 1000px;
+        padding: 120px;
         border-radius: 150px;
+        height: 950px;
     }
 
     .form__inputs-group {
@@ -929,6 +957,14 @@ footer *>a:hover {
 
     .form__decoration {
         display: block;
+    }
+
+    .form__decoration--line {
+        left: 40.5%;
+    }
+
+    button {
+        font-size: 4rem;
     }
 
     footer {
@@ -944,6 +980,11 @@ footer *>a:hover {
         width: 400px;
     }
 
+    .footer__social-link {
+        height: 80px;
+        width: 80px;
+    }
+
     
     .footer__social-container {
         flex-direction: row;
@@ -957,6 +998,44 @@ footer *>a:hover {
     .column {
         text-align: left;
         padding-left: 5%;
+    }
+
+}
+
+@media (min-width: 1366px) {
+
+    h2 {
+        background-size: 60%;
+    }
+
+    h3 {
+        max-width: 60%;
+    }
+    
+    .events__title{
+        font-size: 6rem;
+        max-width: 100%;
+    }
+
+    .events__uranus {
+        translate: 0 -150px;
+    }
+
+    .our-mission__title > a {
+        max-width: 450px;
+    }
+
+    .our-services__title-members {
+        font-size: 4rem;
+    }
+
+    .our-services__text-container {
+        margin: 150px 50px;
+        translate: 0 100px;
+    }
+
+    .our-services__title-span {
+        margin-bottom: 40px;
     }
 
 }
@@ -1030,16 +1109,16 @@ footer *>a:hover {
     .our-services__title-span {
         font-size: 3rem;
         margin-top: -31px;
+        margin-bottom: 120px;
     }
     
     .our-services__text-container {
-        margin: 400px auto 100px;
+        translate: 0 270px;
     }
 
     .our-services__anchor {
         width: 270px;
         font-size: 2rem;
-        margin-left: 100px;
         margin-bottom: 70px;
     }
 
@@ -1076,10 +1155,6 @@ footer *>a:hover {
     .form__decoration {
         height: 50px;
         width: 50px;
-    }
-
-    button {
-        font-size: 4rem;
     }
 
     footer {
