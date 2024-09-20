@@ -1186,6 +1186,37 @@ footer *>a:hover {
     }
 }
 
+@media (min-width: 2250px) {
+
+    h2 {
+        background-size: 40%;
+    }
+
+    .our-services__separator {
+        height: 140px;
+    }
+
+    .header__subtitle {
+        max-width: 40%;
+    }
+
+    .our-services__title {
+        font-size: 7.5rem;
+    }
+
+    .our-services__title-members {
+        font-size: 6rem;
+    }
+}
+
+@media (min-width: 2350px) {
+    #our-mission__rocket {
+        width: 390px;
+        top: -18%;
+        left: 30%;
+    }
+}
+
 
 
 
