@@ -68,7 +68,72 @@
 
     </nav>
 
-    <main> </main>
+    <div class="members-program__background">
+        <header class="header-program">
+            <div class="header__title-container">
+                <svg width="4" height="236" viewBox="0 0 4 236" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 0L2.00001 236" stroke="white" stroke-width="4" />
+                </svg>
+                <h2 id="members-program__title">MCPAY <span>Todo lo que necesitas.</span></h2>
+            </div>
+            <svg id="down-arrow" width="66" height="111" viewBox="0 0 66 111" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.8">
+                    <path d="M63.6203 2L32.9996 32.6207L2.37891 2" stroke="white" stroke-width="4"
+                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M63.6203 40L32.9996 70.6207L2.37891 40" stroke="white" stroke-opacity="0.6"
+                        stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M63.6203 78L32.9996 108.621L2.37891 78" stroke="white" stroke-opacity="0.3"
+                        stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+            </svg>
+        </header>
+    </div>
+
+    <main>
+        <div>
+            <div>
+                <h3>Comisiones más baratas.</h3>
+                <p>Queremos que trabajes y ganes el máximo posible!</p>
+                <p>Por eso, además de simplificar el cobro, en MCPay mantenemos lo mas bajo posible el costo de
+                    comisiones para ser los mas competentes del mercado y que puedas disfrutar de tu dinero.</p>
+            </div>
+            <img class="rounded-image" src="./img/gallery/image 25.png" alt="">
+        </div>
+        <div>
+            <div>
+                <h3>OLVÍDATE DE LOS CHEQUES.</h3>
+                <p>Cheques? En el Siglo XXI?</p>
+                <p>Nosotros tratamos de no ser tan arcaicos como para que tengas que esperar todo el dia al cartero
+                    encerrado en tu casa. Al contrario! Con MCPay vas a tener infinitas comodidades empezando por el
+                    hecho de recibir tu dinero al instante que se ejecuta el pago. (sin esperar al cartero).</p>
+            </div>
+            <img src="./img/gallery/image.png" alt="">
+        </div>
+        <div>
+            <div>
+                <h3>PAGOS EN MÁS DE 10 METODOS.</h3>
+                <p>Cómo preferís cobrar?</p>
+                <p>Tenemos el método perfecto de cobro que estás buscando. Desde PayPal, Criptomonedas, Payoneer,
+                    Tranferencia bancaria... Tenes la libertad de retirar tu dinero de la manera que prefieras.</p>
+            </div>
+            <img class="rounded-image" src="./img/gallery/image 25.png" alt="">
+        </div>
+        <div>
+            <div>
+                <h3>SIN EXCLUSIVIDAD.</h3>
+                <p>Como lees, no hay.</p>
+                <p>El dia que todo sea perfecto yen caso de que quieras retirarte de la plataforma podes hacerlo sin
+                    ningún tipo de objeción de nuestra parte.</p>
+            </div>
+            <img src="./img/gallery/image.png" alt="">
+        </div>
+        <h3>ASISTENTE PERSONAL</h3>
+        <p>Eso mismo que estas leyendo.</p>
+        <p>Brindamos asistencia a cualquier tipo de dudas dentro de MCPay, no importa el dia o el horario que sea
+            nosotros estamos para ayudarte frente a cualquier inconveniente que tengas. </p>
+        </div>
+    </main>
 
     <footer>
         <div class="footer-container">
@@ -105,10 +170,9 @@
         <div class="footer__social-container">
             <a href="#"><img class="footer-logo" src="img/Hashrate-logo.png" alt=""></a>
             <div class="footer__social">
-                <a href="https://www.instagram.com/hashrateagency/" target="_blank"><img
-                        class="footer__social-link" src="img/social/IG.png" alt=""></a>
-                <a href="" target="_blank"><img class="footer__social-link" src="img/social/LKD.png"
-                        alt=""></a>
+                <a href="https://www.instagram.com/hashrateagency/" target="_blank"><img class="footer__social-link"
+                        src="img/social/IG.png" alt=""></a>
+                <a href="" target="_blank"><img class="footer__social-link" src="img/social/LKD.png" alt=""></a>
                 <a href="https://x.com/hashrateagency" target="_blank"><img class="footer__social-link"
                         src="img/social/TWT.png" alt=""></a>
             </div>
