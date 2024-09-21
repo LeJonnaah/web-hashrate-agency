@@ -39,6 +39,8 @@ h2 {
     background: url('../img/title-background.png') no-repeat;
     background-size: contain;
     background-position: center;
+    background-position-y: 150px;
+    padding-top: 70px;
 }
 
 h1 {
@@ -54,9 +56,30 @@ h1 {
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(90deg, rgba(188, 163, 255, 0.15) 0%, rgba(113, 98, 153, 0.15) 100%);
+    backdrop-filter: blur(20px);
     padding: 25px;
     border: 1px solid;
     z-index: 1000;
+}
+
+.swiper {
+    width: 100%;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: calc((100% - 30px) / 2) !important;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:0px !important;
 }
 
 .nav-menu {
@@ -238,6 +261,7 @@ header {
     max-width: -webkit-fill-available;
     border-radius: 25px;
     background: #40255b;
+    width: fit-content;
     border: 2px solid #FFFFFFCC;
 }
 
@@ -287,16 +311,34 @@ header {
 }
 
 .images__container {
-    margin: 50px 0;
-    display: flex;
-    justify-content: center;
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 100px;
+    justify-items: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 100px;
 }
 
 .enterprises__image {
-    max-width: 150px;
+    max-width: 250px;
+    max-height: 150px;
+}
+
+.enterprises__image:nth-child(5),
+.enterprises__image:nth-child(6),
+.enterprises__image:nth-child(7),
+.enterprises__image:nth-child(8),
+.enterprises__image:nth-child(9),
+.enterprises__image:nth-child(10),
+.enterprises__image:nth-child(11),
+.enterprises__image:nth-child(12),
+.enterprises__image:nth-child(13),
+.enterprises__image:nth-child(14),
+.enterprises__image:nth-child(15),
+.enterprises__image:nth-child(16) {
+    display: none;
 }
 
 .enterprises__image:hover {
@@ -467,14 +509,14 @@ header {
 #members-program {
     background-color: #F5F5F5;
     height: 100%;
-    padding: 50px;
+    padding: 110px 50px 120px;
     flex-basis: 50%;
 }
 
 #mcpay {
     background-color: #202020;
     height: 100%;
-    padding: 50px;
+    padding: 110px 50px 120px;
     flex-basis: 50%;
 }
 
@@ -485,13 +527,13 @@ header {
     font-weight: 700;
     font-family: 'Quantico', sans-serif;
     font-size: 2.5rem;
-    margin-bottom: 30px;
     margin-left: 5%;
     text-transform: uppercase;
 }
 
 .our-services__image {
     width: 100%;
+    margin-top: -10px;
 }
 
 .our-services__image:hover {
@@ -539,6 +581,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
 }
 
 .our-services__anchor {
@@ -551,7 +594,7 @@ header {
     font-size: 1rem;
     font-weight: 700;
     padding: 10px 20px;
-    margin-top: 25px;
+    margin-top: 50px;
     margin-left: 12%;
     display: block;
     text-align: center;
@@ -563,16 +606,6 @@ header {
     right: 40px;
     margin-top: 20px;
     color: #fff;
-}
-
-#what-type {
-    margin: 20px auto;
-    width: 20%;
-}
-
-.form__inputs-type {
-    display: flex;
-    align-items: center;
 }
 
 .more-doubts {
@@ -592,7 +625,7 @@ header {
 
 form {
     max-width: 500px;
-    margin: 60px auto 0;
+    margin: 300px auto 0;
     padding: 100px 20px;
     border: 4px solid #BCA3FF;
     border-radius: 50px;
@@ -616,13 +649,6 @@ form {
     display: none;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    color: #fff;
-}
-
 input[type="text"],
 input[type="email"],
 select {
@@ -640,36 +666,6 @@ input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 select {
     color: #f6e8ff;
-}
-
-.option input[type="checkbox"] {
-    /* Personaliza el tamaño, color, etc. */
-    width: 20px;
-    height: 20px;
-    accent-color: #4CAF50;
-    /* Color del check */
-    border: 2px solid #ccc;
-    /* Borde del checkbox */
-    border-radius: 3px;
-    /* Bordes redondeados */
-}
-
-.option input[type="checkbox"]:checked {
-    /* Estilo cuando está seleccionado */
-    background-color: #4CAF50;
-    border-color: #4CAF50;
-}
-
-.options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    max-width: 60%;
-}
-
-.option {
-    gap: 2px;
-    display: flex;
 }
 
 button {
@@ -868,6 +864,22 @@ footer *>a:hover {
         height: 50px;
     }
 
+    .enterprises__image:nth-child(5),
+.enterprises__image:nth-child(6),
+.enterprises__image:nth-child(7),
+.enterprises__image:nth-child(8),
+.enterprises__image:nth-child(9),
+.enterprises__image:nth-child(10),
+.enterprises__image:nth-child(11),
+.enterprises__image:nth-child(12),
+.enterprises__image:nth-child(13),
+.enterprises__image:nth-child(14),
+.enterprises__image:nth-child(15),
+.enterprises__image:nth-child(16) {
+    display: block;
+}
+
+
     .our-mission__title,
     .our-services__title {
         font-size: 6rem;
@@ -875,7 +887,7 @@ footer *>a:hover {
     }
 
     .our-services__title {
-        margin-left: 15%;
+        font-size: 7rem;
     }
 
     .our-mission__text,
@@ -915,8 +927,17 @@ footer *>a:hover {
     }
 
     .our-services__title-members {
-        font-size: 3rem;
+        font-size: 4rem;
         margin-left: 15%;
+    }
+
+    .our-services__title {
+        margin-left: 13%;
+    }
+
+    .our-services__title-members,
+    .our-services__title {
+        height: 250px;
     }
 
     #read-more {
@@ -1016,10 +1037,6 @@ footer *>a:hover {
     h2 {
         background-size: 60%;
     }
-
-    h3 {
-        max-width: 60%;
-    }
     
     .events__title{
         font-size: 6rem;
@@ -1035,7 +1052,18 @@ footer *>a:hover {
     }
 
     .our-services__title-members {
-        font-size: 4rem;
+        font-size: 5rem;
+    }
+
+    .our-services__title {
+        font-size: 8rem;
+        margin-left: 15%;
+    }
+
+    .our-services__anchor {
+        font-size: 2rem;
+        width: 250px;
+        padding: 10px;
     }
 
     .our-services__text-container {
@@ -1057,7 +1085,6 @@ footer *>a:hover {
 
     h2 {
         background-size: 55%;
-        background-position-y: 60px;
     }
 
     .header__subtitle {
@@ -1096,7 +1123,6 @@ footer *>a:hover {
 
     .our-services__title-members {
         margin-left: 15%;
-        margin-bottom: 50px;
         font-size: 5rem;
     }
 

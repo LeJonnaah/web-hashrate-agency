@@ -1,23 +1,18 @@
-const seconds = 2.5;
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
-var swiperDesktop = new Swiper(".desktop-swiper", {
+const swiper = new Swiper('.swiper', {
+
 	slidesPerView: 3,
-	spaceBetween: 30,
-	centeredSlides: true,
-	loop: true,
-	autoplay: {
-		delay: seconds * 1000,
-		disableOnInteraction: false
-	}
-});
 
-var swiperMobile = new Swiper(".mobile-swiper", {
-	slidesPerView: 1,
-	spaceBetween: 15,
-	centeredSlides: true,
-	loop: true,
-	autoplay: {
-		delay: seconds * 1000,
-		disableOnInteraction: false
-	}
+	spaceBetween: 0,
+
+	grid: {
+		rows: 2,
+	},
+
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+
 });
