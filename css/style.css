@@ -23,6 +23,8 @@ body {
     background-color: #1b0b32;
     color: #f5f6f7;
     font-size: 16px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 .background__container {
@@ -58,7 +60,7 @@ h1 {
     background: linear-gradient(90deg, rgba(188, 163, 255, 0.15) 0%, rgba(113, 98, 153, 0.15) 100%);
     backdrop-filter: blur(20px);
     padding: 25px;
-    border: 1px solid;
+    border: 1px solid rgba(188, 163, 255, 0.79);
     z-index: 1000;
 }
 
@@ -67,25 +69,36 @@ h1 {
     height: 800px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    /* overflow: hidden; */
+    list-style: none;
+    padding: 0;
+    z-index: 1;
 }
 
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
-    height: calc((100% - 30px) / 2) !important;
-
-    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
-    margin-right:0px !important;
 }
 
 .nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+    margin-right: 20px;
 }
 
 .nav-item__separator {
@@ -94,6 +107,7 @@ h1 {
 
 li {
     list-style: none;
+    display: flex;
 }
 
 nav a {
@@ -106,10 +120,12 @@ nav a {
     text-align: center;
     text-decoration: none;
     font-size: 17px;
+    align-self: center;
 }
 
 nav img {
-    margin-top: 15px;
+    margin-top: 10px;
+    width: 250px;
 }
 
 nav a:hover {
@@ -195,7 +211,7 @@ h3 {
 }
 
 header {
-    margin-top: 120px;
+    margin-top: 110px;
 }
 
 .header__container {
@@ -219,6 +235,7 @@ header {
     text-align: center;
     text-transform: uppercase;
     width: 150px;
+    font-weight: 700;
     align-content: center;
 
 }
@@ -239,13 +256,9 @@ header {
 
 .main__decoration {
     position: absolute;
-    top: 100%;
-    z-index: -1;
-    width: 150px
-}
-
-.main__decoration--right {
-    right: 0;
+    width: fit-content;
+    max-width: 100%;
+    translate: 0 700px;
 }
 
 .content-creators {
@@ -260,7 +273,8 @@ header {
 .card {
     max-width: -webkit-fill-available;
     border-radius: 25px;
-    background: #40255b;
+    backdrop-filter: blur(20px);
+    background: rgba(208, 138, 255, 0.2);
     width: fit-content;
     border: 2px solid #FFFFFFCC;
 }
@@ -313,8 +327,6 @@ header {
 .images__container {
     margin: 100px 0;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 50px;
     grid-row-gap: 100px;
     justify-items: center;
@@ -442,10 +454,6 @@ header {
 }
 
 .events__uranus {
-    background: url("../img/uranus.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
     height: 150px;
     width: 150px;
     margin: auto;
@@ -801,10 +809,6 @@ footer *>a:hover {
         gap: 20px;
     }
 
-    nav a {
-        padding: 14px 16px;
-    }
-
     .navbar {
     padding: 10px;
     }
@@ -813,8 +817,13 @@ footer *>a:hover {
         margin-left: 50px;
     }
 
+    nav img {
+        margin-left: 50px;
+    }
+
     .nav-item__separator {
         display: block;
+        margin-left: 20px;
     }
 
     nav a div {
@@ -850,6 +859,7 @@ footer *>a:hover {
     
     .header__subtitle {
         font-size: 4rem;
+        max-width: 60%;
     }
 
     .header__anchor {
@@ -864,18 +874,23 @@ footer *>a:hover {
         height: 50px;
     }
 
-    .enterprises__image:nth-child(5),
-.enterprises__image:nth-child(6),
-.enterprises__image:nth-child(7),
-.enterprises__image:nth-child(8),
-.enterprises__image:nth-child(9),
-.enterprises__image:nth-child(10),
-.enterprises__image:nth-child(11),
-.enterprises__image:nth-child(12),
-.enterprises__image:nth-child(13),
-.enterprises__image:nth-child(14),
-.enterprises__image:nth-child(15),
-.enterprises__image:nth-child(16) {
+.images__container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.enterprises__image:nth-child(5),
+    .enterprises__image:nth-child(6),
+    .enterprises__image:nth-child(7),
+    .enterprises__image:nth-child(8),
+    .enterprises__image:nth-child(9),
+    .enterprises__image:nth-child(10),
+    .enterprises__image:nth-child(11),
+    .enterprises__image:nth-child(12),
+    .enterprises__image:nth-child(13),
+    .enterprises__image:nth-child(14),
+    .enterprises__image:nth-child(15),
+    .enterprises__image:nth-child(16) {
     display: block;
 }
 
@@ -977,7 +992,7 @@ footer *>a:hover {
         max-width: 1000px;
         padding: 120px;
         border-radius: 150px;
-        height: 950px;
+        height: 900px;
     }
 
     .form__inputs-group {
@@ -1037,6 +1052,10 @@ footer *>a:hover {
     h2 {
         background-size: 60%;
     }
+
+    .main__decoration {
+        translate: 0 500px;
+    } 
     
     .events__title{
         font-size: 6rem;
@@ -1049,6 +1068,13 @@ footer *>a:hover {
 
     .our-mission__title > a {
         max-width: 450px;
+    }
+
+    .our-mission__text {
+        font-size: 1.5rem;
+        left: 50px;
+        position: relative;
+        width: 70%;
     }
 
     .our-services__title-members {
@@ -1158,13 +1184,13 @@ footer *>a:hover {
     }
 
     #our-mission__rocket {
-        width: 390px;
+        width: 405px;
         top: -18%;
         left: 35%;
     }
 
     .our-mission__text, .our-services__paragraph {
-        font-size: 2rem;
+        font-size: 1.7rem;
         line-height: 50px;
     }
 
@@ -1364,13 +1390,6 @@ article {
     margin-bottom: 200px;
 }
 
-.main__decoration--left {
-    margin: 0 0 200px;
-    width: 650px;
-    height: auto;
-    max-height: 1000px;
-}
-
 .bottom-background {
     background: url('../img/members-program-bottom.background.png');
     background-repeat: no-repeat;
@@ -1385,11 +1404,6 @@ article {
 
 
 @media (min-width: 580px) {
-    
-    .main__decoration--left {
-        max-height: 705px;
-        translate: 0 60px;
-    }
 
     #members-program__title > span {
         line-height: 20px;
@@ -1404,13 +1418,6 @@ article {
 
     .articles__container {
         margin-left: 22%;
-    }
-    
-    .main__decoration--left {
-        max-height: 980px;
-        width: 700px;
-        position: absolute;
-        left: -150px;
     }
     
     .article__text {
@@ -1428,11 +1435,6 @@ article {
     .article__text {
         font-size: 2rem; 
         margin-bottom: 100px;  
-    }
-
-    .main__decoration--left {
-        max-height: 2300px;
-        translate: 0 50px;
     }
 
 }
