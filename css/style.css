@@ -252,6 +252,7 @@ header {
     font-family: 'Quantico', sans-serif;
     font-weight: 700;
     font-size: 2.5rem;
+    margin-bottom: 100px;
 }
 
 .main__decoration {
@@ -271,21 +272,21 @@ header {
 }
 
 .card {
-    max-width: -webkit-fill-available;
     border-radius: 25px;
     backdrop-filter: blur(20px);
     background: rgba(208, 138, 255, 0.2);
-    width: fit-content;
+    width: -webkit-fill-available;
     border: 2px solid #FFFFFFCC;
 }
 
 .card__image {
     padding: 10px;
-    max-width: -webkit-fill-available;
+    width: -webkit-fill-available;
+    height: 250px;
 }
 
 .card__logo {
-    width: 20%;
+    width: 18%;
     float: left;
     border-radius: 50%;
     margin-bottom: 20px;
@@ -293,7 +294,8 @@ header {
 }
 
 .card__text {
-    margin: 0 29%;
+    margin: 0 25%;
+    text-align: left;
 }
 
 .card__title {
@@ -322,6 +324,7 @@ header {
     border: 2px solid #a087da;
     border-left: none;
     border-right: none;
+    backdrop-filter: blur(20px);
 }
 
 .images__container {
@@ -646,7 +649,7 @@ form {
 .form__decoration--line {
     position: absolute;
     top: -637px;
-    left: 28.5%;
+    left: 26.5%;
 }
 
 .form__decoration {
@@ -898,7 +901,7 @@ footer *>a:hover {
     .our-mission__title,
     .our-services__title {
         font-size: 6rem;
-        max-width: 46%;
+        max-width: 45%;
     }
 
     .our-services__title {
@@ -1054,7 +1057,7 @@ footer *>a:hover {
     }
 
     .main__decoration {
-        translate: 0 500px;
+        translate: 0 650px;
     } 
     
     .events__title{
@@ -1211,6 +1214,7 @@ footer *>a:hover {
     form {
         max-width: 50%;
         padding: 120px;
+        margin-top: 550px;
     }
 
     .form__decoration {

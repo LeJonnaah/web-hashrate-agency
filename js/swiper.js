@@ -2,20 +2,37 @@ import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs
 
 const swiper = new Swiper('.swiper', {
 
-	slidesPerView: 3,
+	slidesPerView: 1,
 
-	spaceBetween: 0,
+	spaceBetween: 30,
 
 	grid: {
 		rows: 2,
 	},
 
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+	autoplay: {
+		delay: 3000,
 	},
 
 	loop: true,
+	
+	breakpoints: {
+		1024: {
+			slidesPerView: 2,
+		},
 
+		1440: {
+			slidesPerView: 4,
+		},
+
+		1920: {
+			slidesPerView: 4,
+		},
+
+		2560: {
+			slidesPerView: 7,
+		},
+
+	}
 
 });
