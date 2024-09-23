@@ -10,9 +10,9 @@ const swiper = new Swiper('.swiper', {
 		rows: 2,
 	},
 
-	autoplay: {
-		delay: 3000,
-	},
+	// autoplay: {
+	// 	delay: 3000,
+	// },
 
 	loop: true,
 	
@@ -30,7 +30,7 @@ const swiper = new Swiper('.swiper', {
 		},
 
 		2560: {
-			slidesPerView: 7,
+			slidesPerView: 4,
 		},
 
 	}
