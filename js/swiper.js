@@ -36,3 +36,53 @@ const swiper = new Swiper('.swiper', {
 	}
 
 });
+
+new Swiper('.swiper-members', {
+
+	slidesPerView: 7,
+
+	spaceBetween: 0,
+
+	// grid: {
+	// 	rows: 2,
+	// },
+
+	loop: true,
+
+	autoplay: {
+		delay: 1000,
+	},
+
+	breakpoints: {
+		1024: {
+			slidesPerView: 9,
+		},
+	}
+	
+});
+
+
+new Swiper('.swiper-members--reverse', {
+
+	slidesPerView: 7,
+
+	spaceBetween: 0,
+
+	// grid: {
+	// 	rows: 2,
+	// },
+
+	loop: true,
+
+	autoplay: {
+		delay: 1000,
+		reverseDirection: true,
+	},
+
+	breakpoints: {
+		1024: {
+			slidesPerView: 9,
+		},
+	}
+
+});
