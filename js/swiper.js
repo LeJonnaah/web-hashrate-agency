@@ -15,6 +15,12 @@ const swiper = new Swiper('.swiper', {
 	// },
 
 	loop: true,
+
+	lazy: {
+		loadPrevNext: true, // pre-loads the next image to avoid showing a loading placeholder if possible
+		loadPrevNextAmount: 2 //or, if you wish, preload the next 2 images
+	},
+	
 	
 	breakpoints: {
 		1024: {
@@ -39,7 +45,7 @@ const swiper = new Swiper('.swiper', {
 
 new Swiper('.swiper-members', {
 
-	slidesPerView: 7,
+	slidesPerView: 5,
 
 	spaceBetween: 0,
 
@@ -50,7 +56,7 @@ new Swiper('.swiper-members', {
 	loop: true,
 
 	autoplay: {
-		delay: 1000,
+		delay: 500,
 	},
 
 	breakpoints: {
@@ -64,7 +70,7 @@ new Swiper('.swiper-members', {
 
 new Swiper('.swiper-members--reverse', {
 
-	slidesPerView: 7,
+	slidesPerView: 5,
 
 	spaceBetween: 0,
 
@@ -75,7 +81,7 @@ new Swiper('.swiper-members--reverse', {
 	loop: true,
 
 	autoplay: {
-		delay: 1000,
+		delay: 500,
 		reverseDirection: true,
 	},
 
