@@ -45,6 +45,8 @@ const swiper = new Swiper('.swiper', {
 
 new Swiper('.swiper-members', {
 
+	allowTouchMove: false,
+
 	slidesPerView: 5,
 
 	spaceBetween: 0,
@@ -69,6 +71,8 @@ new Swiper('.swiper-members', {
 
 
 new Swiper('.swiper-members--reverse', {
+
+	allowTouchMove: false,
 
 	slidesPerView: 5,
 
