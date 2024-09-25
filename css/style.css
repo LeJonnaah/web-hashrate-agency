@@ -1158,7 +1158,7 @@ footer *>a:hover {
     }
 
     .li {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
 }
@@ -1397,7 +1397,7 @@ footer *>a:hover {
 /* Members Program Page */
 
 .members-program__background {
-    background: url('../img/members-program-lines-background.png');
+    background: url('../img/background/members-program__background-1.svg');
     background-repeat: no-repeat;
     background-size: 100% 120%;
     width: 100%;
@@ -1472,7 +1472,7 @@ article {
 }
 
 .bottom-background {
-    background: url('../img/members-program-bottom.background.png');
+    background: url('../img/background/members-program__background-2.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1538,8 +1538,8 @@ article {
     }
     
     .article__svg--fourth {
-        top: 7%;
-        transform: scaleY(0.45);
+        top: 28%;
+        transform: scaleY(1.1);
     }
 }
 
@@ -1568,6 +1568,19 @@ article {
 
     .slide-image {
         width: 150px;
+    }
+
+    #members-program__title,
+    #members-program__title > span {
+        font-size: 8rem;
+    }
+    
+    #members-program__title > span {
+        line-height: 50px;
+    }
+    
+    .header__title-container > svg {
+        transform: scale(1);
     }
 
 }
@@ -1619,9 +1632,7 @@ article {
 
 .semi-rounded-image {
     display: none;
-    border-radius: 0px 164px 164px 0px;
-    -webkit-border-radius: 0px 164px 164px 0px;
-    -moz-border-radius: 0px 143px 164px 0px;
+    border-radius: 0px 50% 50% 0px;
     height: 400px;
 }
 
@@ -1645,6 +1656,10 @@ article {
 
 @media (min-width: 1024px) {
 
+    .items-container{
+        display: flex;
+    }
+
     .rounded-image {
         display: block;
     }
@@ -1658,10 +1673,6 @@ article {
 
 @media (min-width: 1366px) {
     
-    .items-container{
-        display: flex;
-    }
-    
     .container__text-container {
         width: 435px;
         margin: auto;
@@ -1670,6 +1681,22 @@ article {
     }
     
     .container__paragraph {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
+
+    .semi-rounded-image {
+        height: 500px;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .semi-rounded-image {
+        height: 900px;
+    }
+
+    .rounded-image {
+        width: 1000px;
+    }
+
 }
