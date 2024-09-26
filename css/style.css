@@ -16,9 +16,11 @@ html {
     scroll-behavior: smooth;
     max-width: 100%;
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
+    scroll-behavior: smooth;
     font-family: 'IBM Plex Sans', sans-serif;
     background-color: #1b0b32;
     color: #f5f6f7;
@@ -68,7 +70,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(90deg, rgba(188, 163, 255, 0.15) 0%, rgba(113, 98, 153, 0.15) 100%);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(50px);
     padding: 25px;
     border: 1px solid rgba(188, 163, 255, 0.79);
     z-index: 1000;
@@ -76,9 +78,7 @@ h1 {
 
 .swiper {
     width: 100%;
-    height: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 50px;
     position: relative;
     overflow: hidden;
     list-style: none;
@@ -314,13 +314,13 @@ header {
     line-height: 70px;
 }
 
-.enterprises__title > span {
+.enterprises__title>span {
     display: block;
 }
 
 .enterprises__container {
-    background: rgb(68,25,177);
-    background: linear-gradient(0deg, rgba(68,25,177,1) 0%, rgba(106,27,88,1) 50%, rgba(44,23,72,1) 100%);
+    background: rgb(68, 25, 177);
+    background: linear-gradient(0deg, rgba(68, 25, 177, 1) 0%, rgba(106, 27, 88, 1) 50%, rgba(44, 23, 72, 1) 100%);
     border-top: 1px solid #a087da;
     border-bottom: 1px solid #d8513b;
     border-left: none;
@@ -341,6 +341,7 @@ header {
 .enterprises__image {
     max-width: 250px;
     max-height: 150px;
+    transition: all 0.5s ease;
 }
 
 .enterprises__image:nth-child(5),
@@ -360,7 +361,6 @@ header {
 
 .enterprises__image:hover {
     transform: scale(1.1);
-    transition: all 0.5s ease;
 }
 
 .our-mission {
@@ -382,7 +382,7 @@ header {
     flex: 50%;
 }
 
-.our-mission__title-span-1{
+.our-mission__title-span-1 {
     letter-spacing: 0.2rem;
 }
 
@@ -399,8 +399,7 @@ header {
     width: 100%;
 }
 
-
-.our-mission__title > a {
+.our-mission__title>a {
     text-decoration: none;
     color: #BCA3FF;
     font-size: 1rem;
@@ -560,11 +559,11 @@ header {
 .our-services__image {
     width: 100%;
     margin-top: -10px;
+    transition: all 0.5s ease;
 }
 
 .our-services__image:hover {
     transform: scale(1.1);
-    transition: all 0.5s ease;
     cursor: pointer;
 }
 
@@ -694,7 +693,7 @@ select {
     color: #f6e8ff;
 }
 
-button {
+.form__button {
     background-color: #bca3ff;
     color: white;
     padding: 3px 30px;
@@ -831,7 +830,7 @@ footer *>a:hover {
     }
 
     .navbar {
-    padding: 10px;
+        padding: 10px;
     }
 
     .nav-logo {
@@ -872,11 +871,11 @@ footer *>a:hover {
     .enterprises__title {
         font-size: 4rem;
     }
-    
+
     .header__decoration {
         margin: 0 70px;
     }
-    
+
     .header__subtitle {
         font-size: 4rem;
         max-width: 60%;
@@ -892,14 +891,29 @@ footer *>a:hover {
     #down-arrow {
         width: auto;
         height: 50px;
+        animation: move-down 1.5s infinite;
     }
 
-.images__container {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
+    @keyframes move-down {
+        0% {
+            transform: translateY(0);
+        }
 
-.enterprises__image:nth-child(5),
+        50% {
+            transform: translateY(10px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .images__container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .enterprises__image:nth-child(5),
     .enterprises__image:nth-child(6),
     .enterprises__image:nth-child(7),
     .enterprises__image:nth-child(8),
@@ -911,13 +925,13 @@ footer *>a:hover {
     .enterprises__image:nth-child(14),
     .enterprises__image:nth-child(15),
     .enterprises__image:nth-child(16) {
-    display: block;
-}
+        display: block;
+    }
 
-.our-mission__title,
-.our-mission__paragraph {
-    translate: 0 -2rem;
-}
+    .our-mission__title,
+    .our-mission__paragraph {
+        translate: 0 -2rem;
+    }
 
     .our-mission__title,
     .our-services__title {
@@ -961,7 +975,7 @@ footer *>a:hover {
         left: 32%;
         top: -48%;
     }
-    
+
     .our-mission__svg {
         display: block;
         position: absolute;
@@ -971,7 +985,7 @@ footer *>a:hover {
         z-index: -1;
     }
 
-    .our-mission__title > a {
+    .our-mission__title>a {
         bottom: -82px;
         left: 25%;
         font-size: 2rem;
@@ -1055,7 +1069,7 @@ footer *>a:hover {
         left: 40.3%;
     }
 
-    button {
+    .form__button {
         font-size: 4rem;
     }
 
@@ -1077,7 +1091,7 @@ footer *>a:hover {
         width: 80px;
     }
 
-    
+
     .footer__social-container {
         flex-direction: row;
         justify-content: space-between;
@@ -1086,6 +1100,7 @@ footer *>a:hover {
 
     .footer__social {
         align-self: center;
+        margin-right: 65px;
     }
 
     .column {
@@ -1103,9 +1118,9 @@ footer *>a:hover {
 
     .main__decoration {
         translate: 0 650px;
-    } 
-    
-    .events__title{
+    }
+
+    .events__title {
         font-size: 6rem;
         max-width: 100%;
     }
@@ -1114,7 +1129,7 @@ footer *>a:hover {
         translate: 0 -150px;
     }
 
-    .our-mission__title > a {
+    .our-mission__title>a {
         max-width: 450px;
     }
 
@@ -1127,6 +1142,10 @@ footer *>a:hover {
 
     .our-services__title-members {
         font-size: 4.5rem;
+    }
+
+    #mcpay h3 {
+        margin-left: 13%;
     }
 
     .our-services__title {
@@ -1148,7 +1167,7 @@ footer *>a:hover {
         font-size: 1.5rem;
     }
 
-    
+
     footer {
         height: 650px;
     }
@@ -1168,7 +1187,8 @@ footer *>a:hover {
         top: -60%;
     }
 
-    .our-mission__title, .our-mission__paragraph {
+    .our-mission__title,
+    .our-mission__paragraph {
         translate: 0 -5rem;
     }
 
@@ -1181,11 +1201,17 @@ footer *>a:hover {
     }
 
     h2 {
-        background-size: 52%;
+        background-size: 60%;
+        font-size: 8rem;
+    }
+
+    h2>span {
+        font-size: 6.6rem;
     }
 
     .header__subtitle {
-        max-width: 50%;
+        font-size: 5rem;
+        max-width: 55%;
     }
 
     .main__title {
@@ -1194,15 +1220,11 @@ footer *>a:hover {
 
     .header__decoration {
         margin: 0 50px;
-        max-width: 200px;
+        max-width: 300px;
     }
 
     .enterprises__title {
         font-size: 5rem;
-    }
-
-    .enterprises__image {
-        /* max-width: 100%; */
     }
 
     .events__title {
@@ -1229,9 +1251,13 @@ footer *>a:hover {
         font-size: 8rem;
     }
 
+    #mcpay h3 {
+        margin-left: 14%;
+    }
+
     .our-services__title {
         max-width: 900px;
-        margin-left: 13%;
+        margin-left: 9%;
         font-size: 10rem;
     }
 
@@ -1240,7 +1266,7 @@ footer *>a:hover {
         margin-top: -31px;
         margin-bottom: 120px;
     }
-    
+
     .our-services__text-container {
         translate: 0 270px;
     }
@@ -1258,15 +1284,16 @@ footer *>a:hover {
     }
 
     .our-mission__svg {
-        top: 73%;
+        top: 73.4%;
     }
 
-    .our-mission__text, .our-services__paragraph {
+    .our-mission__text,
+    .our-services__paragraph {
         font-size: 1.7rem;
         line-height: 50px;
     }
 
-    .our-mission__title > a {
+    .our-mission__title>a {
         left: 314px;
         max-width: 450px;
         font-size: 2.2rem;
@@ -1329,7 +1356,8 @@ footer *>a:hover {
         font-size: 6rem;
     }
 
-    .our-mission__text, .our-services__paragraph {
+    .our-mission__text,
+    .our-services__paragraph {
         font-size: 2.7rem;
     }
 
@@ -1399,7 +1427,7 @@ footer *>a:hover {
 .members-program__background {
     background: url('../img/background/members-program__background-1.svg');
     background-repeat: no-repeat;
-    background-size: 100% 120%;
+    background-size: 100%;
     width: 100%;
 }
 
@@ -1418,7 +1446,7 @@ footer *>a:hover {
     margin-bottom: 100px;
 }
 
-.header__title-container > svg {
+.header__title-container>svg {
     align-self: center;
     transform: scale(0.8);
 }
@@ -1432,7 +1460,7 @@ footer *>a:hover {
     translate: 0 -55px;
 }
 
-#members-program__title > span {
+#members-program__title>span {
     text-transform: none;
 }
 
@@ -1494,7 +1522,7 @@ article {
 
 @media (min-width: 580px) {
 
-    #members-program__title > span {
+    #members-program__title>span {
         line-height: 20px;
     }
 }
@@ -1508,7 +1536,7 @@ article {
     .articles__container {
         margin-left: 10%;
     }
-    
+
     .article__text {
         font-size: 1rem;
     }
@@ -1539,12 +1567,12 @@ article {
         top: 28%;
         transform: scaleY(1.1);
     }
-    
+
     .article__svg--third {
         top: 27%;
         transform: scaleY(1.1);
     }
-    
+
     .article__svg--fourth {
         top: 26%;
         transform: scaleY(1.07);
@@ -1559,7 +1587,7 @@ article {
     }
 
     .article__text {
-        font-size: 2rem; 
+        font-size: 2rem;
     }
 
     .article__content {
@@ -1579,15 +1607,15 @@ article {
     }
 
     #members-program__title,
-    #members-program__title > span {
+    #members-program__title>span {
         font-size: 8rem;
     }
-    
-    #members-program__title > span {
+
+    #members-program__title>span {
         line-height: 50px;
     }
-    
-    .header__title-container > svg {
+
+    .header__title-container>svg {
         transform: scale(1);
     }
 
@@ -1596,8 +1624,15 @@ article {
 
 /* MCPAY Page */
 
+.mcpay__background {
+    background: url('../img/background/mcpay__background-1.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+}
 
-.items-container{
+
+.items-container {
     margin: 150px auto 10px;
     color: rgba(207, 208, 208, 1);
 }
@@ -1608,7 +1643,7 @@ article {
     margin: 100px auto;
 }
 
-.items-container--reverse{
+.items-container--reverse {
     flex-direction: row-reverse;
 }
 
@@ -1644,6 +1679,13 @@ article {
     height: 400px;
 }
 
+.contact-us {
+    background: url('../img/background/Fondo-footer\ 4.png');
+    background-repeat: no-repeat;
+    background-size: 100% 200%;
+    background-position: center;
+}
+
 .form__container {
     background: url('../img/image.png');
     background-repeat: no-repeat;
@@ -1651,7 +1693,7 @@ article {
     background-position: center;
     width: 70%;
     margin: auto;
-    height: 350px;
+    height: 200px;
     display: flex;
     justify-content: center;
     border-radius: 50px 50px 0px 0px;
@@ -1664,7 +1706,7 @@ article {
 
 @media (min-width: 1024px) {
 
-    .items-container{
+    .items-container {
         display: flex;
     }
 
@@ -1676,18 +1718,22 @@ article {
         display: block;
     }
 
+    .form__container {
+        height: 400px;
+    }
+
 }
 
 
 @media (min-width: 1366px) {
-    
+
     .container__text-container {
         width: 435px;
         margin: auto;
         width: 35%;
         padding: 20px;
     }
-    
+
     .container__paragraph {
         font-size: 1.7rem;
     }
@@ -1715,3 +1761,55 @@ article {
     }
 }
 
+/* FAQS */
+
+.faqs-container {
+    max-width: 90%;
+    margin: 0 auto 100px;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    font-family: 'Quantico', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 4rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    font-size: 2rem;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+    content: '\2295';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 1.5rem;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
