@@ -13,7 +13,7 @@ try {
         contain: true,
         prevNextButtons: false,
         freeScroll: true,
-        // autoPlay: true
+        autoPlay: true
     });
 
 } catch (error) {
