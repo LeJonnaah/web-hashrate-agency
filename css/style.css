@@ -657,7 +657,7 @@ iframe {
 
 form {
     max-width: 500px;
-    margin: 300px auto 0;
+    margin: 0 auto;
     padding: 100px 20px;
     border: 4px solid #BCA3FF;
     border-radius: 50px;
@@ -668,9 +668,9 @@ form {
 }
 
 .form__decoration--line {
+    display: none;
     position: absolute;
     top: -637px;
-    left: 26.5%;
 }
 
 .form__decoration {
@@ -1057,6 +1057,7 @@ footer *>a:hover {
     }
 
     form {
+        margin-top: 300px;
         max-width: 1000px;
         padding: 120px;
         border-radius: 150px;
@@ -1073,6 +1074,7 @@ footer *>a:hover {
     }
 
     .form__decoration--line {
+        display: block;
         left: 40.3%;
     }
 
