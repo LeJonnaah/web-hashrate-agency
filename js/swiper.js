@@ -2,6 +2,8 @@ import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs
 
 const swiper = new Swiper('.swiper', {
 
+	allowTouchMove: false,
+
 	slidesPerView: 1,
 
 	spaceBetween: 30,
@@ -41,6 +43,7 @@ const swiper = new Swiper('.swiper', {
 
 new Swiper('.swiper--reverse', {
 
+	allowTouchMove: false,
 
 	slidesPerView: 1,
 
@@ -88,10 +91,6 @@ new Swiper('.swiper-members', {
 
 	spaceBetween: 0,
 
-	// grid: {
-	// 	rows: 2,
-	// },
-
 	loop: true,
 
 	autoplay: {
@@ -114,10 +113,6 @@ new Swiper('.swiper-members--reverse', {
 	slidesPerView: 5,
 
 	spaceBetween: 0,
-
-	// grid: {
-	// 	rows: 2,
-	// },
 
 	loop: true,
 
