@@ -87,7 +87,8 @@ h1 {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color: linear-gradient(90deg, rgba(188, 163, 255, 0.15) 0%, rgba(113, 98, 153, 0.15) 100%);
+    /* background-color: linear-gradient(90deg, rgba(188, 163, 255, 0.15) 0%, rgba(113, 98, 153, 0.15) 100%); */
+    background-color: rgba(113, 98, 153, 0.15);
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
     padding: 25px;
@@ -749,7 +750,7 @@ img {
 .more-doubts {
     background: url("../img/background/liquid-background.svg") no-repeat;
     background-size: contain;
-    margin-top: -120px;
+    margin-top: -50px;
 }
 
 form {
@@ -1082,7 +1083,7 @@ footer *>a:hover {
         z-index: -1;
         width: 350px;
         left: 32%;
-        top: -66%;
+        top: -67%;
     }
 
     .our-mission__rocket-gif {
@@ -1115,7 +1116,7 @@ footer *>a:hover {
     .our-mission__svg {
         display: block;
         position: absolute;
-        top: 65%;
+        top: 64%;
         right: 9%;
         width: 350px;
         z-index: -1;
@@ -1154,6 +1155,10 @@ footer *>a:hover {
 
     #read-more {
         right: 15%;
+    }
+
+    .more-doubts {
+        margin-top: -120px;
     }
 
     .our-services__container section {
@@ -1363,6 +1368,28 @@ footer *>a:hover {
 
 }
 
+@media (min-width: 1600px) {
+
+    .our-services__text-container {
+        padding-top: 350px;
+    }
+
+    form {
+        margin-top: 330px;
+    }
+
+    .our-mission__svg {
+        right: 17%;
+        width: 500px;
+    }
+
+    #read-more {
+        margin-top: 10%;
+        right: 61%;
+    }
+
+}
+
 @media (min-width: 1920px) {
 
     .nav-logo {
@@ -1415,9 +1442,17 @@ footer *>a:hover {
         align-content: end;
     }
 
+    .our-mission__title-span-1 {
+        letter-spacing: 0.8rem;
+    }
+
     .our-mission__title {
         max-width: 1000px;
         font-size: 8rem;
+    }
+
+    .our-mission__title-span-2 {
+        letter-spacing: 1.3rem;
     }
 
     #mcpay h3 {
@@ -1460,7 +1495,6 @@ footer *>a:hover {
     .our-mission__svg {
         top: 73.1%;
         right: 18%;
-        width: 500px;
     }
 
     .our-mission__text,
@@ -1486,8 +1520,13 @@ footer *>a:hover {
     }
 
     .our-services__text-container {
-        padding-top: 300px;
+        padding-top: 300px !important;
     }
+
+    form {
+        margin-top: 420px;
+    }
+
 
     .form__decoration {
         height: 50px;
@@ -1662,6 +1701,15 @@ footer *>a:hover {
     width: 50px;
 }
 
+.lazy {
+    opacity: 0;
+}
+
+.lazy-loaded {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
 article {
     display: flex;
     color: rgba(207, 208, 208, 1);
@@ -1751,7 +1799,7 @@ article {
     }
 
     .article__svg--second {
-        top: 28%;
+        top: 27%;
         transform: scaleY(1.1);
     }
 
@@ -1761,8 +1809,8 @@ article {
     }
 
     .article__svg--fourth {
-        top: 26%;
-        transform: scaleY(1.07);
+        top: 7%;
+        transform: scaleY(0.45);
     }
 }
 
@@ -1784,6 +1832,11 @@ article {
     .slide-image {
         width: 150px;
     }
+    
+    .article__svg--fourth {
+        top: 28%;
+        transform: scaleY(1.1);
+    }
 
 }
 
@@ -1804,6 +1857,15 @@ article {
 
     .header__title-container>svg {
         transform: scale(1);
+    }
+
+}
+
+@media (min-width: 1500px) {
+
+    .article__svg--fourth {
+        top: 26%;
+        transform: scaleY(1.05);
     }
 
 }
