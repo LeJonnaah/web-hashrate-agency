@@ -6,6 +6,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +20,20 @@ html {
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+}
+
+html::-webkit-scrollbar {
+	width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+    background: #1b0b32;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #bca3ff;
+    border-radius: 10px;
 }
 
 body {
@@ -49,30 +65,34 @@ h2 {
     background-size: 550px;
     background-position-y: 100px;
     padding-top: 70px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
     text-align: center;
     text-transform: uppercase;
     font-weight: 900;
     font-size: 4rem;
     margin-bottom: 50px;
-    /* -webkit-text-stroke: 1px #fff; */
-    /* -webkit-text-fill-color: transparent; */
+    -webkit-text-stroke: 2px #fff;
+    -webkit-text-fill-color: transparent;
 }
 
 .header__title-glow {
-    -webkit-animation: glow 2s ease-in-out infinite alternate;
-    -moz-animation: glow 2s ease-in-out infinite alternate;
-    animation: glow 2s ease-in-out infinite alternate;
+    -webkit-animation: glow 5s ease-in-out alternate;
+    -moz-animation: glow 5s ease-in-out alternate;
+    animation: glow 5s ease-in-out alternate;
 }
 
 @keyframes glow {
-    from {
+    0% {
         text-shadow: none;
         /* text-shadow: 0 0 5px #fff, 0 0 10px; */
     }
 
-    to {
+    50% {
         text-shadow: 0 0 5px #e6e6e6, 0 0 10px #e7e7e7;
+    }
+
+    100% {
+        text-shadow: none;
     }
 }
 
@@ -89,8 +109,8 @@ h1 {
     align-items: center;
     /* background-color: linear-gradient(90deg, rgba(188, 163, 255, 0.15) 0%, rgba(113, 98, 153, 0.15) 100%); */
     background-color: rgba(113, 98, 153, 0.15);
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     padding: 25px;
     border: 1px solid rgba(188, 163, 255, 0.79);
     z-index: 1000;
@@ -309,8 +329,8 @@ header {
 
 .card {
     border-radius: 25px;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     background: rgba(208, 138, 255, 0.2);
     width: -webkit-fill-available;
     border: 2px solid #FFFFFFCC;
@@ -361,14 +381,14 @@ iframe {
 .enterprises__container {
     background: rgba(54, 25, 94, 0.5);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 20px );
-    -webkit-backdrop-filter: blur( 20px );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
     background: url('../img/background/Fondo-footer 4.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-top: 1px solid #a087da;
-    border-bottom: 1px solid #d8513b;
+    border-bottom: 1px solid #a087da;
     border-left: none;
     border-right: none;
     margin: 50px 0 200px;
@@ -452,6 +472,16 @@ iframe {
     left: 40px;
     width: 77%;
 }
+
+.our-mission__anchor {
+    text-align: right;
+}
+
+.our-mission__anchor-span-arrow {
+    animation: move-down 1.5s infinite;
+    display: inline-block;
+}
+
 
 .our-mission__paragraph,
 .our-services__paragraph {
@@ -606,7 +636,7 @@ iframe {
 
 .wrapper-ribbon.ribbon-graphic-2 {
     position: relative;
-    transform: rotate(-2deg);
+    transform: rotate(-0.7deg);
 }
 
 .ribbon {
@@ -978,8 +1008,7 @@ footer *>a:hover {
     h2 {
         font-size: 7rem;
         background-size: 950px;
-        background-position-y: 130px;
-    }
+        background-position-y: 145px;    }
 
     .header__title-span {
         font-size: 5.6rem;
@@ -1117,11 +1146,11 @@ footer *>a:hover {
         }
 
         50% {
-            translate: -2px 5px;
+            translate: -1px 1px;
         }
 
         75% {
-            translate: 2px 5px;
+            translate: 1px 1px;
         }
 
         100% {
@@ -1140,7 +1169,7 @@ footer *>a:hover {
 
     .our-mission__title>a {
         bottom: -82px;
-        left: 25%;
+        left: 13%;
         font-size: 2rem;
         max-width: 500px;
         translate: 0 25px;
@@ -1337,10 +1366,6 @@ footer *>a:hover {
         margin-top: 360px;
     }
 
-    footer {
-        height: 650px;
-    }
-
     footer *>h4 {
         font-size: 1.5rem;
     }
@@ -1518,7 +1543,7 @@ footer *>a:hover {
     }
 
     .our-mission__title>a {
-        left: 314px;
+        left: 270px;
         max-width: 450px;
         font-size: 2.2rem;
     }
@@ -1833,6 +1858,7 @@ article {
 
     .article__content {
         padding: 2%;
+        margin-right: 10%;
     }
 
     .slide-image {
