@@ -764,6 +764,17 @@ img {
     align-self: flex-start;
 }
 
+#stars {
+    position: fixed; /* Contenedor fijo, no afecta el flujo del documento */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Solo ocupa la ventana visible */
+    overflow: hidden;
+    pointer-events: none; /* No interfiere con la interacción del usuario */
+    z-index: -1; /* Estar detrás del contenido principal */
+}
+
 .our-services__anchor-container {
     display: flex;
     flex-direction: column;
@@ -880,7 +891,7 @@ select {
 }
 
 .btn>span {
-    font-size: 4rem;
+    font-size: 2rem;
     color: #fff;
 }
 
@@ -1470,6 +1481,11 @@ footer *>a:hover {
 
     .form__button {
         font-size: 4rem;
+    }
+
+    .btn>span {
+        font-size: 4rem;
+        color: #fff;
     }
 
     footer {
