@@ -868,16 +868,16 @@ select {
 
 #sky {
     height: 100%;
-  }
-  
-  .star {
+}
+
+.star {
     box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.4);
     position: absolute;
     width: 1px;
     height: 1px;
     border-radius: 2px;
     background-color: white;
-  }
+}
 
 .btn>span {
     font-size: 4rem;
@@ -897,32 +897,26 @@ select {
 }
 
 .btn:focus {
-    /*animation*/
     -webkit-animation: extend 1s ease-in-out;
     -ms-animation: extend 1s ease-in-out;
     animation: extend 1s ease-in-out;
     -webkit-animation-fill-mode: forwards;
-    /* Chrome, Safari, Opera */
     animation-fill-mode: forwards
 }
 
 .btn:focus>span {
-    /*animation*/
     -webkit-animation: disappear 1s ease-in-out;
     -ms-animation: disappear 1s ease-in-out;
     animation: disappear 1s ease-in-out;
     -webkit-animation-fill-mode: forwards;
-    /* Chrome, Safari, Opera */
     animation-fill-mode: forwards
 }
 
 .btn:focus>img {
-    /*animation*/
     -webkit-animation: appear 1s ease-in-out;
     -ms-animation: appear 1s ease-in-out;
     animation: appear 1s ease-in-out;
     -webkit-animation-fill-mode: forwards;
-    /* Chrome, Safari, Opera */
     animation-fill-mode: forwards
 }
 
