@@ -109,8 +109,8 @@ h1 {
     align-items: center;
     /* background-color: linear-gradient(90deg, rgba(188, 163, 255, 0.15) 0%, rgba(113, 98, 153, 0.15) 100%); */
     background-color: rgba(113, 98, 153, 0.15);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 25px;
     border: 1px solid rgba(188, 163, 255, 0.79);
     z-index: 1000;
@@ -171,7 +171,7 @@ nav a {
     text-decoration: none;
     margin: 0 10px;
     float: left;
-    color: #cfd0d0;
+    color: #fff;
     text-align: center;
     text-decoration: none;
     font-size: 17px;
@@ -329,8 +329,8 @@ header {
 
 .card {
     border-radius: 25px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     background: rgba(208, 138, 255, 0.2);
     width: -webkit-fill-available;
     border: 2px solid #FFFFFFCC;
@@ -381,7 +381,7 @@ iframe {
 .enterprises__container {
     background: rgba(54, 25, 94, 0.5);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(5px);
     background: url('../img/background/Fondo-footer 4.png');
     background-size: cover;
