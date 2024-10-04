@@ -76,23 +76,23 @@ h2 {
 }
 
 .header__title-glow {
-    -webkit-animation: glow 5s ease-in-out alternate;
-    -moz-animation: glow 5s ease-in-out alternate;
-    animation: glow 5s ease-in-out alternate;
+    -webkit-animation: glow 0.2s ease-in-out alternate 4;
+    -moz-animation: glow 0.2s ease-in-out alternate 4;
+    animation: glow 0.2s ease-in-out alternate 4;
 }
 
 @keyframes glow {
     0% {
-        text-shadow: none;
-        /* text-shadow: 0 0 5px #fff, 0 0 10px; */
+        -webkit-text-fill-color: transparent;
     }
 
     50% {
+        -webkit-text-fill-color: #fff;
         text-shadow: 0 0 5px #e6e6e6, 0 0 10px #e7e7e7;
     }
 
     100% {
-        text-shadow: none;
+        -webkit-text-fill-color: transparent;
     }
 }
 
@@ -469,7 +469,7 @@ iframe {
     font-size: 1rem;
     position: absolute;
     bottom: -65px;
-    left: 40px;
+    right: 25%;
     width: 77%;
 }
 
@@ -1131,6 +1131,24 @@ footer *>a:hover {
         top: -66%;
     }
 
+    .star {
+        animation: star 1s infinite;
+    }
+
+    @keyframes star {
+        0% {
+            transform: scaleY(1);
+        }
+
+        50% {
+            transform: scaleY(1.05);
+        }
+
+        100% {
+            transform: scaleY(1);
+        }   
+    }
+
     .our-mission__rocket-gif {
         display: block;
         width: 400px;
@@ -1169,7 +1187,6 @@ footer *>a:hover {
 
     .our-mission__title>a {
         bottom: -82px;
-        left: 13%;
         font-size: 2rem;
         max-width: 500px;
         translate: 0 25px;
@@ -1313,6 +1330,7 @@ footer *>a:hover {
     }
 
     .our-mission__title>a {
+        right: 15%;
         max-width: 450px;
     }
 
@@ -1420,6 +1438,10 @@ footer *>a:hover {
     .our-mission__svg {
         right: 17%;
         width: 500px;
+    }
+
+    .our-mission__title>a {
+        right: 25%;
     }
 
     #read-more {
@@ -1543,7 +1565,6 @@ footer *>a:hover {
     }
 
     .our-mission__title>a {
-        left: 270px;
         max-width: 450px;
         font-size: 2.2rem;
     }
@@ -1700,6 +1721,7 @@ footer *>a:hover {
     padding-top: 50px;
     justify-content: center;
     margin-bottom: 100px;
+    margin-left: 5%;
 }
 
 .header__title-container>svg {

@@ -26,7 +26,14 @@ try {
         // Enable free scrolling
         freeScroll: true,
         // Enable auto-play
-        autoPlay: true
+        autoPlay: 2000,
+
+        pauseAutoPlayOnHover: false,
+
+        wrapAround: true,
+
+        // Enable lazy loading
+        lazyLoad: true
     });
 
 } catch (error) {
@@ -57,7 +64,6 @@ window.addEventListener('scroll', () => {
     const elements = document.querySelectorAll('.lazy');
     elements.forEach(element => {
         if (isInViewport(element)) {
-            console.log(element);
             // Carga el elemento
             element.classList.remove('lazy');
             element.classList.add('lazy-loaded');
@@ -68,7 +74,7 @@ window.addEventListener('scroll', () => {
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
-        rect.top >= -500 &&
+        rect.top <= 1000 &&
         rect.left >= 0 &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
