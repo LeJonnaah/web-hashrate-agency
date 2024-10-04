@@ -341,6 +341,32 @@ header {
     translate: 0 700px;
 }
 
+.main__gif {
+    width: 30%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 85%;
+}
+
+.main__gif--right {
+    width: 30%;
+    margin: auto;
+    position: absolute;
+    bottom: 100%;
+    right: 85%;
+}
+
+.main__gif,
+.main__gif--right {
+    translate: 0 -200px;
+}
+
+
+.main__gif-container {
+    position: relative;
+}
+
 .content-creators {
     display: flex;
     justify-content: center;
@@ -995,7 +1021,7 @@ select {
     }
 
     50% {
-        color: #6fb07f;
+        opacity: 0;
     }
     
     100% {
@@ -2082,7 +2108,9 @@ article {
     }
 
     .article__image--last {
-        translate: 0 -75px;
+        translate: -58px 164px;
+        width: 300px;
+        height: 200px;
     }
 
     .article__svg {
