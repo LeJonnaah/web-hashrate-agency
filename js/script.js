@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
     window.scrollTo(0, 0);  // Desplaza al inicio de la página
 };
 
@@ -94,13 +94,13 @@ function createStars(i) {
 function drawStars() {
     var tmpStar = document.createElement('figure');
     tmpStar.className = "star";
-    
+
     // Usar la altura del contenido real sin afectar la página
     var contentHeight = document.body.scrollHeight; // Altura real del contenido
 
     tmpStar.style.top = Math.random() * 100 + '%';  // Posición aleatoria dentro de todo el contenido
     tmpStar.style.left = Math.random() * 100 + '%';  // Posición horizontal aleatoria
-    
+
     document.getElementById('stars').appendChild(tmpStar);
 }
 
@@ -116,6 +116,6 @@ function animateStars() {
     });
 }
 
-createStars(250);
+createStars(150);
 selectStars();
 animateStars();
