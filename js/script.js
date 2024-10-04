@@ -1,3 +1,7 @@
+window.onload = function () {
+    window.scrollTo(0, 0);
+};
+
 // Select the hamburger menu element
 const hamburger = document.querySelector(".hamburger");
 
@@ -80,3 +84,31 @@ function isInViewport(element) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
+
+function createStars(i) {
+    for (var i; i; i--) {
+        drawStars();
+    }
+}
+
+function drawStars() {
+    var tmpStar = document.createElement('figure')
+    tmpStar.className = "star";
+    tmpStar.style.top = 1000 * Math.random() + '%';
+    tmpStar.style.left = 100 * Math.random() + '%';
+    document.getElementById('stars').appendChild(tmpStar);
+}
+
+function selectStars() {
+    stars = document.querySelectorAll(".star");
+}
+
+function animateStars() {
+    Array.prototype.forEach.call(stars, function (el, i) {
+        TweenMax.to(el, Math.random() * 0.5 + 0.5, { opacity: Math.random(), onComplete: animateStars });
+    });
+}
+
+createStars(1000);
+selectStars();
+animateStars();
