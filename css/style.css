@@ -715,7 +715,7 @@ iframe {
 
 .image-9 {
     flex: none;
-    width: 3.3em;
+    width: 9em;
     margin-right: 5.2em;
 }
 
@@ -1072,6 +1072,8 @@ select {
     font-size: 2rem;
     display: block;
     margin: 50px auto;
+    background-color: #fff;
+    color: #000;
 }
 
 .form__button-container {
@@ -2108,9 +2110,7 @@ article {
     }
 
     .article__image--last {
-        translate: -58px 164px;
-        width: 300px;
-        height: 200px;
+        translate: 0 -75px;
     }
 
     .article__svg {
@@ -2267,21 +2267,25 @@ article {
 }
 
 .form__container {
-    background: url('../img/image.png');
+    background: url('../img/mcpay/Contactanos\ MCPay.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    width: 70%;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form__container--members {
+    background: url('../img/members/Contactanos\ PM.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 70%;
     margin: auto;
     height: 150px;
     display: flex;
     justify-content: center;
-    border-radius: 50px 50px 0px 0px;
-}
-
-.form__container button {
-    background-color: #fff;
-    color: #000;
 }
 
 @media (min-width: 1024px) {
