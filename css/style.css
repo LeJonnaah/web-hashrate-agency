@@ -106,9 +106,9 @@ h2 {
         -webkit-text-stroke: 1px #fff;
         -webkit-text-fill-color: #fff;
         text-shadow: 0 0 5px #e6e6e6, 0 0 10px #e7e7e7;
-    } 
+    }
 
-    100% {  
+    100% {
         -webkit-text-stroke: 2px #fff;
         -webkit-text-fill-color: transparent;
     }
@@ -713,6 +713,18 @@ iframe {
     line-height: 2.2em;
 }
 
+
+.numberCircle {
+    display: flex;
+    width: 28ch;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 9px solid #fff;
+    translate: 0 150px;
+}
+
 .image-9 {
     flex: none;
     width: 9em;
@@ -814,14 +826,18 @@ img {
 }
 
 #stars {
-    position: fixed; /* Contenedor fijo, no afecta el flujo del documento */
+    position: fixed;
+    /* Contenedor fijo, no afecta el flujo del documento */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Solo ocupa la ventana visible */
+    height: 100%;
+    /* Solo ocupa la ventana visible */
     overflow: hidden;
-    pointer-events: none; /* No interfiere con la interacción del usuario */
-    z-index: -1; /* Estar detrás del contenido principal */
+    pointer-events: none;
+    /* No interfiere con la interacción del usuario */
+    z-index: -1;
+    /* Estar detrás del contenido principal */
 }
 
 .our-services__anchor-container {
@@ -1023,7 +1039,7 @@ select {
     50% {
         opacity: 0;
     }
-    
+
     100% {
         opacity: 0;
         color: #6fb07f;
@@ -1921,7 +1937,7 @@ footer *>a:hover {
 /* Members Program Page */
 
 .members-program__background {
-    background: url('../img/background/members-program__background-1.svg');
+    background-image: url('../img/background/members-program__background-1.svg');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
@@ -1972,6 +1988,7 @@ footer *>a:hover {
 
 .slide-image {
     width: 50px;
+    border-radius: 50px;
 }
 
 .lazy {
@@ -2206,7 +2223,7 @@ article {
 /* MCPAY Page */
 
 .mcpay__background {
-    background: url('../img/background/mcpay__background-1.svg');
+    background-image: url('../img/background/mcpay__background-1.svg');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
