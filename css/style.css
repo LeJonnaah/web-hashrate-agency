@@ -713,18 +713,6 @@ iframe {
     line-height: 2.2em;
 }
 
-
-.numberCircle {
-    display: flex;
-    width: 28ch;
-    align-items: center;
-    justify-content: center;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    border: 9px solid #fff;
-    translate: 0 150px;
-}
-
 .image-9 {
     flex: none;
     width: 9em;
@@ -1358,7 +1346,7 @@ footer *>a:hover {
         z-index: -1;
         width: 350px;
         left: 32%;
-        top: -66%;
+        top: -67%;
     }
 
     .star {
@@ -1409,7 +1397,7 @@ footer *>a:hover {
     .our-mission__svg {
         display: block;
         position: absolute;
-        top: 64%;
+        top: 64.2%;
         right: 9%;
         width: 350px;
         z-index: -1;
@@ -2066,7 +2054,7 @@ article {
     transition: transform .3s ease;
 }
 
-.article__image {
+.numberCircle {
     display: none;
 }
 
@@ -2119,39 +2107,33 @@ article {
         width: 100px;
     }
 
-    .article__image {
-        display: block;
-        max-width: none;
-        width: 200px;
+    .numberCircle {
+        display: flex;
+        width: 28ch;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        border: 10px solid #fff;
         translate: 0 150px;
     }
-
-    .article__image--last {
-        translate: 0 -75px;
-    }
+    
 
     .article__svg {
         transform: rotate(180deg);
         position: relative;
         left: 50%;
-        top: 26%;
-        transform: scaleY(1.1);
+        top: 23%;
+        transform: scaleY(1.05);
     }
 
-    .article__svg--second {
-        top: 27%;
-        transform: scaleY(1.1);
-    }
-
-    .article__svg--third {
-        top: 27%;
-        transform: scaleY(1.1);
-    }
-
+    .article__svg--second,
+    .article__svg--third,
     .article__svg--fourth {
-        top: 7%;
-        transform: scaleY(0.45);
+        top: 24%;
+        transform: scaleY(1.05);
     }
+
 }
 
 @media (min-width: 1366px) {
@@ -2174,11 +2156,6 @@ article {
         width: 150px;
     }
 
-    .article__svg--fourth {
-        top: 28%;
-        transform: scaleY(1.12);
-    }
-
 }
 
 @media (min-width: 1440px) {
@@ -2198,15 +2175,6 @@ article {
 
     .header__title-container>svg {
         transform: scale(1);
-    }
-
-}
-
-@media (min-width: 1500px) {
-
-    .article__svg--fourth {
-        top: 29%;
-        transform: scaleY(1.15);
     }
 
 }
