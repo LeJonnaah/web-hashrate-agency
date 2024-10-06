@@ -557,6 +557,10 @@ iframe {
     display: none;
 }
 
+#our-mission__right-star {
+    translate: -130px 0;
+}
+
 .our-mission__image {
     width: 100%;
 }
@@ -2238,12 +2242,6 @@ article {
     width: 40%;
 }
 
-.semi-rounded-image {
-    display: none;
-    border-radius: 0px 50% 50% 0px;
-    height: 400px;
-}
-
 .contact-us {
     background: url('../img/background/Fondo-footer\ 4.png');
     background-repeat: no-repeat;
@@ -2283,10 +2281,6 @@ article {
         display: block;
     }
 
-    .semi-rounded-image {
-        display: block;
-    }
-
     .form__container {
         height: 400px;
     }
@@ -2307,16 +2301,9 @@ article {
         font-size: 1.7rem;
     }
 
-    .semi-rounded-image {
-        height: 500px;
-    }
 }
 
 @media (min-width: 1440px) {
-
-    .semi-rounded-image {
-        height: 900px;
-    }
 
     .rounded-image {
         width: 1000px;
