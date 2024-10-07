@@ -28,7 +28,8 @@
 
 			//Recipients
 			// $mail->setFrom('web@hashratestudios.com', 'HASHRATE STUDIOS');
-			$mail->setFrom('web@localhost/hashrate/', 'HASHRATE AGENCY');
+			// $mail->setFrom('web@localhost/hashrate/', 'HASHRATE AGENCY');
+			$mail->setFrom('http://127.0.0.1:5500/index.html', 'HASHRATE AGENCY');
 			// $mail->addAddress('hi@hashratestudios.com');     //Add a recipient
 			$mail->addAddress('jonathanandueza1201@gmail.com');     //Add a recipient
 
@@ -83,7 +84,8 @@
 
 			//Recipients
 			// $mail->setFrom('web@hashratestudios.com', 'HASHRATE STUDIOS');
-			$mail->setFrom('web@localhost/hashrate/', 'HASHRATE AGENCY');
+			// $mail->setFrom('web@localhost/hashrate/', 'HASHRATE AGENCY');
+			$mail->setFrom('http://127.0.0.1:5500/index.html', 'HASHRATE AGENCY');
 			// $mail->addAddress('hi@hashratestudios.com');     //Add a recipient
 			$mail->addAddress('jonathanandueza1201@gmail.com');     //Add a recipient
 
