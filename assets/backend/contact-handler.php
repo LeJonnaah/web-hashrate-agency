@@ -7,14 +7,14 @@
 	require('./send-email.php');
 
 	// First form (index/main/first page)
-	function contactFormMailOnly($email) {
-		// sendWebhookMailOnly($email);
-		sendMailEmailOnly($email);
+	function contactFormMailOnly($email, $lang) {
+		sendWebhookMailOnly($email, $lang);
+		sendMailEmailOnly($email, $lang);
 	}
 
 	// Second form (contact us/contactanos/latest page)
-	function contactFormAllData($name, $email, $information) {
-		// sendWebhookAllData($name, $email, $information);
-		sendMailAllData($name, $email, $information);
+	function contactFormAllData($name, $email, $information, $lang) {
+		sendWebhookAllData($name, $email, $information, $lang);
+		sendMailAllData($name, $email, $information, $lang);
 	}
 ?>

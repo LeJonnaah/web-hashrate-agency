@@ -110,12 +110,5 @@ function selectStars() {
     stars = document.querySelectorAll(".star");
 }
 
-function animateStars() {
-    Array.prototype.forEach.call(stars, function (el, i) {
-        TweenMax.to(el, Math.random() * 0.5 + 0.5, { opacity: Math.random(), onComplete: animateStars });
-    });
-}
-
 createStars(150);
 selectStars();
-animateStars();

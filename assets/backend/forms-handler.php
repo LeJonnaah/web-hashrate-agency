@@ -16,7 +16,7 @@
 
 	// Verificamos que la request sea POST.
 	// A su vez, nos aseguramos de que cierta información obligatoria haya sido enviada en el form-data
-	if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['contactForm']) && isset($_POST['mail']) && isset($_POST['captcha'])) {
+	if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['contactForm']) && isset($_POST['mail']) && isset($_POST['captcha']) && isset($_POST['lang'])) {
 		
 		// Definimos el header (se utilizará la para la respuesta al front-end) e importamos las dependencias
 		header('Content-type: application/json');
@@ -27,6 +27,13 @@
 		// Verificamos la autenticidad del token asignado por el captcha
 		if (!hCaptcha($_POST['captcha'])) {
 			$response = array('code' => 1);
+			echo json_encode($response);
+			return;
+		}
+
+		// Verificamos que el lenguaje esté soportado (este error jamás debería ocurridad, es para evitar exploits)
+		if (!supportedLang($_POST['lang'])) {
+			$response = array('code' => 999);
 			echo json_encode($response);
 			return;
 		}
@@ -47,7 +54,7 @@
 				
 				// Enviamos la payload con los datos a otra parte del back-end
 				// Este formulario corresponde al footer
-				contactFormAllData($_POST['name'], $_POST['mail'], $_POST['information']);
+				contactFormAllData($_POST['name'], $_POST['mail'], $_POST['information'], $_POST['lang']);
 				$response = array('code' => 0);
 				echo json_encode($response);
 				return;
@@ -64,7 +71,7 @@
 
 			// Enviamos la payload con los datos a otra parte del back-end
 			// Este formulario corresponde al index/main (principio de la página)
-			contactFormMailOnly($_POST['mail']);
+			contactFormMailOnly($_POST['mail'], $_POST['lang']);
 			$response = array('code' => 0);
 			echo json_encode($response);
 			return;

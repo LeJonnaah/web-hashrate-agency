@@ -3,7 +3,7 @@
 	// Mejor hacer una función para verificar el captcha, más fácil y lo puedo llamar desde cualquier parte del código :D
 	
 	function hCaptcha($hcaptcha) {
-		$secret = "secret";
+		$secret = "0x0000000000000000000000000000000000000000";
 	
 		$data = array(
 			'secret' => $secret,

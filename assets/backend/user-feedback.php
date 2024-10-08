@@ -2,11 +2,12 @@
 
 	// Diversas funciones para facilitarme la vida a la hora de enviar feedback al usuario :P
 
-	function invalidData($scriptTags) {
+	function invalidData($scriptTags, $lang) {
 		if ($scriptTags) {
 			echo "<script>";
 		};
 
+		if ($lang == "es") {
 			echo "
 			Swal.fire({
 				icon: 'error',
@@ -16,17 +17,29 @@
 				confirmButtonText: 'Cerrar'
 			})
 			";
+		} else {
+			echo "
+			Swal.fire({
+				icon: 'error',
+				title: 'Incomplete data',
+				text: 'Please complete all the information to continue.',
+				confirmButtonColor: '#e19e57',
+				confirmButtonText: 'Close'
+			})
+			";
+		}
 
 		if ($scriptTags) {
 			echo "</script>";
 		};
 	}
 
-	function invalidEmail($scriptTags) {
+	function invalidEmail($scriptTags, $lang) {
 		if ($scriptTags) {
 			echo "<script>";
 		};
 
+		if ($lang == "es") {
 			echo "
 			Swal.fire({
 				icon: 'error',
@@ -36,17 +49,29 @@
 				confirmButtonText: 'Cerrar'
 			})
 			";
+		} else {
+			echo "
+			Swal.fire({
+				icon: 'error',
+				title: 'Invalid email',
+				text: 'Please use a valid email address.',
+				confirmButtonColor: '#e19e57',
+				confirmButtonText: 'Close'
+			})
+			";
+		}
 
 		if ($scriptTags) {
 			echo "</script>";
 		};
 	}
 
-	function invalidCaptcha($scriptTags) {
+	function invalidCaptcha($scriptTags, $lang) {
 		if ($scriptTags) {
 			echo "<script>";
 		};
 
+		if ($lang == "es") {
 			echo "
 			Swal.fire({
 				icon: 'error',
@@ -56,17 +81,29 @@
 				confirmButtonText: 'Cerrar'
 			})
 			";
+		} else {
+			echo "
+			Swal.fire({
+				icon: 'error',
+				title: 'Invalid captcha',
+				text: 'Please try again.',
+				confirmButtonColor: '#e19e57',
+				confirmButtonText: 'Close'
+			})
+			";
+		}
 
 		if ($scriptTags) {
 			echo "</script>";
 		};
 	}
 
-	function unknownError($scriptTags) {
+	function unknownError($scriptTags, $lang) {
 		if ($scriptTags) {
 			echo "<script>";
 		};
 
+		if ($lang == "es") {
 			echo "
 			Swal.fire({
 				icon: 'error',
@@ -76,17 +113,29 @@
 				confirmButtonText: 'Cerrar'
 			})
 			";
+		} else {
+			echo "
+			Swal.fire({
+				icon: 'error',
+				title: 'Unknown error',
+				text: 'There was an unknown error, please try again.',
+				confirmButtonColor: '#e19e57',
+				confirmButtonText: 'Close'
+			})
+			";
+		}
 
 		if ($scriptTags) {
 			echo "</script>";
 		};
 	}
 
-	function successForm($scriptTags) {
+	function successForm($scriptTags, $lang) {
 		if ($scriptTags) {
 			echo "<script>";
 		};
 
+		if ($lang == "es") {
 			echo "
 			Swal.fire({
 				icon: 'success',
@@ -96,6 +145,17 @@
 				confirmButtonText: 'Cerrar'
 			})
 			";
+		} else {
+			echo "
+			Swal.fire({
+				icon: 'success',
+				title: 'Sent!',
+				text: 'Your data has been sent successfully.',
+				confirmButtonColor: '#e19e57',
+				confirmButtonText: 'Close'
+			})
+			";
+		}
 
 		if ($scriptTags) {
 			echo "</script>";

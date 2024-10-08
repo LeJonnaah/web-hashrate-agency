@@ -385,13 +385,8 @@ header {
     border: 2px solid #FFFFFFCC;
 }
 
-iframe {
-    border: none;
-}
-
 .card__image {
-    width: 100%;
-    transform: scale(1.04);
+    padding: 5%;
 }
 
 .card__logo {

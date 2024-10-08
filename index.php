@@ -1,24 +1,55 @@
 <!DOCTYPE html>
-<html lang="es-AR">
+
+<?php
+$lang = "es";
+?>
+
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metadata -->
     <title>HASHRATE AGENCY</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="title" content="HASHRATE STUDIOS" />
+    <meta name="description" content="HRDescription" />
+    <meta property="og:title" content="HASHRATE STUDIOS">
+    <meta property="og:description" content="HRDescription">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="HASHRATE STUDIOS">
+    <meta name="twitter:description" content="HRDescription">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg" href="favicon.svg">
+
+    <!-- hCaptcha -->
+    <script src="https://hcaptcha.com/1/api.js?hl=<?php echo $lang; ?>" async defer></script>
+
+
+    <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
+
+
+
     <!-- No JS? -->
     <noscript>
         <meta http-equiv="refresh" content="0; url=https://duckduckgo.com/" />
     </noscript>
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
 </head>
 
 
 <body class="main-body">
+    <?php
+    require('./assets/backend/user-feedback.php');
+    require('./assets/backend/settings-handler.php');
+    ?>
+
     <h1>Hashrate</h1>
 
+    <!-- Contact us mobile button -->
     <a href="https://wa.me/573332440167" target="_blank" class="contact-mobile">
         <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_25_1839)">
@@ -37,8 +68,9 @@
         </svg>
     </a>
 
-    <nav role="navigation" class="navbar">
-        <a class="nav-logo" href="index.html">
+    <!-- Navbar menu -->
+    <nav class="navbar">
+        <a class="nav-logo" href="index.php">
             <img src="assets/img/HASHRATE-AGENCY.svg" alt="Hashrate logo">
         </a>
         <ul class="nav-menu">
@@ -89,8 +121,10 @@
 
     </nav>
 
+    <!-- Background -->
     <div class="background__container">
 
+        <!-- Header -->
         <header>
             <h2>Dale <span class="header__title-glow">poder </span><span class="header__title-span">a tu proyecto</span>
             </h2>
@@ -125,6 +159,7 @@
                 </svg>
             </div>
 
+            <!-- Down arrow -->
             <svg id="down-arrow" width="66" height="111" viewBox="0 0 66 111" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.8">
@@ -141,10 +176,11 @@
         </header>
 
         <main>
+
+            <!-- Stars Script -->
             <div id="stars"></div>
 
             <h3 class="main__title" id="creadores">Un poco de NUESTRAS campañas</h3>
-
             <svg class="main__decoration" width="1920" height="552" viewBox="0 0 1920 552" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -169,84 +205,84 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div>
-                                <a href="" target="_blank">
-                                    <img class="card__image" src="assets/img/luki-vid.png" alt="">
+                                <a href="https://www.youtube.com/watch?v=tzD1G5YrCJg&t=2s" target="_blank">
+                                    <img class="card__image" src="assets/img/creators-vids/Luki-vid.jpg" alt="Luki video">
                                 </a>
                             </div>
-                            <img class="card__logo" src="assets/img/Luki.png" alt="Luki-logo">
+                            <img class="card__logo" src="assets/img/creators-vids/Luki-pic.jpg" alt="Luki logo">
                             <div class="card__text">
-                                <h4 class="card__title">&#64;Luki_klk</h4>
-                                <p class="card__description">97.176 vistas</p>
+                                <h4 class="card__title">&#64;Luki</h4>
+                                <p class="card__description">112.510 vistas</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
                             <div>
-                                <a href="" target="_blank">
-                                    <img class="card__image" src="assets/img/luki-vid.png" alt="">
+                                <a href="https://www.youtube.com/watch?v=0bZT9NusBsg&t=2s" target="_blank">
+                                    <img class="card__image" src="assets/img/creators-vids/MAAU-vid.jpg" alt="MAAU video">
                                 </a>
                             </div>
-                            <img class="card__logo" src="assets/img/Luki.png" alt="Luki-logo">
+                            <img class="card__logo" src="assets/img/creators-vids/MAAU-pic.jpg" alt="MAAU logo">
                             <div class="card__text">
-                                <h4 class="card__title">&#64;Luki_klk</h4>
-                                <p class="card__description">97.176 vistas</p>
+                                <h4 class="card__title">&#64;MAAU</h4>
+                                <p class="card__description">302.701 vistas</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
                             <div>
-                                <a href="" target="_blank">
-                                    <img class="card__image" src="assets/img/luki-vid.png" alt="">
+                                <a href="https://www.youtube.com/watch?v=0bZT9NusBsg&t=2s" target="_blank">
+                                    <img class="card__image" src="assets/img/creators-vids/Johan_speak-vid.jpg" alt="Johan Speak video">
                                 </a>
                             </div>
-                            <img class="card__logo" src="assets/img/Luki.png" alt="Luki-logo">
+                            <img class="card__logo" src="assets/img/Creators-vids/Johan_speak-pic.jpg" alt="Johan Speak logo">
                             <div class="card__text">
-                                <h4 class="card__title">&#64;Luki_klk</h4>
-                                <p class="card__description">97.176 vistas</p>
+                                <h4 class="card__title">&#64;Johan Speak</h4>
+                                <p class="card__description">356.399 vistas</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
                             <div>
-                                <a href="" target="_blank">
-                                    <img class="card__image" src="assets/img/luki-vid.png" alt="">
+                                <a href="https://www.youtube.com/watch?v=x1-sSu69lbs" target="_blank">
+                                    <img class="card__image" src="assets/img/creators-vids/Julian_abdala-vid.jpg" alt="Julian Abdala video">
                                 </a>
                             </div>
-                            <img class="card__logo" src="assets/img/Luki.png" alt="Luki-logo">
+                            <img class="card__logo" src="assets/img/creators-vids/Julian_abdala-pic.jpg" alt="Julian Abdala logo">
                             <div class="card__text">
-                                <h4 class="card__title">&#64;Luki_klk</h4>
-                                <p class="card__description">97.176 vistas</p>
+                                <h4 class="card__title">&#64;Julian</h4>
+                                <p class="card__description">830.905 vistas</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
                             <div>
-                                <a href="" target="_blank">
-                                    <img class="card__image" src="assets/img/luki-vid.png" alt="">
+                                <a href="https://www.youtube.com/watch?v=B8nFXcw1-dQ" target="_blank">
+                                    <img class="card__image" src="assets/img/creators-vids/John_GB-vid.jpg" alt="John GB video">
                                 </a>
                             </div>
-                            <img class="card__logo" src="assets/img/Luki.png" alt="Luki-logo">
+                            <img class="card__logo" src="assets/img/creators-vids/John_GB-pic.jpg" alt="John GB logo">
                             <div class="card__text">
-                                <h4 class="card__title">&#64;Luki_klk</h4>
-                                <p class="card__description">97.176 vistas</p>
+                                <h4 class="card__title">&#64;John GB</h4>
+                                <p class="card__description">514.184 vistas</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
                             <div>
-                                <a href="" target="_blank">
-                                    <img class="card__image" src="assets/img/luki-vid.png" alt="">
+                                <a href="https://www.youtube.com/watch?v=dzKeb8CJCe4&t=1s" target="_blank">
+                                    <img class="card__image" src="assets/img/creators-vids/REITE_GRONE-vid.jpg" alt="REITE GRONE video">
                                 </a>
                             </div>
-                            <img class="card__logo" src="assets/img/Luki.png" alt="Luki-logo">
+                            <img class="card__logo" src="assets/img/creators-vids/REITE_GRONE-pic.jpg" alt="REITE GRONE logo">
                             <div class="card__text">
-                                <h4 class="card__title">&#64;Luki_klk</h4>
-                                <p class="card__description">97.176 vistas</p>
+                                <h4 class="card__title">&#64;REITEGRONE</h4>
+                                <p class="card__description">68.466 vistas</p>
                             </div>
                         </div>
                     </div>
@@ -261,84 +297,84 @@
                     <div class="swiper-slide">
                         <div class="card">
                             <div>
-                                <a href="" target="_blank"></a>
-                                <img class="card__image" src="assets/img/luki-vid.png" alt="">
+                                <a href="https://www.youtube.com/watch?v=U1BFWQxe_Jc&t=4s" target="_blank">
+                                    <img class="card__image" src="assets/img/creators-vids/DEValen-vid.jpg" alt="DEValen video">
                                 </a>
                             </div>
-                            <img class="card__logo" src="assets/img/Luki.png" alt="Luki-logo">
+                            <img class="card__logo" src="assets/img/creators-vids/DEValen-pic.jpg" alt="DEValen logo">
                             <div class="card__text">
-                                <h4 class="card__title">&#64;Luki_klk</h4>
-                                <p class="card__description">97.176 vistas</p>
+                                <h4 class="card__title">&#64;DEValen</h4></a>
+                                <p class="card__description">595.246 vistas</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
                             <div>
-                                <a href="" target="_blank">
-                                    <img class="card__image" src="assets/img/luki-vid.png" alt="">
+                                <a href="https://www.youtube.com/watch?v=TqCMbbbn1M4&t=9s" target="_blank">
+                                    <img class="card__image" src="assets/img/creators-vids/Tomex-vid.jpg" alt="Tomex video">
                                 </a>
                             </div>
-                            <img class="card__logo" src="assets/img/Luki.png" alt="Luki-logo">
+                            <img class="card__logo" src="assets/img/creators-vids/Tomex-pic.jpg" alt="Tomex Logo">
                             <div class="card__text">
-                                <h4 class="card__title">&#64;Luki_klk</h4>
-                                <p class="card__description">97.176 vistas</p>
+                                <h4 class="card__title">&#64;Tomex</h4>
+                                <p class="card__description">313.423 vistas</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
                             <div>
-                                <a href="" target="_blank">
-                                    <img class="card__image" src="assets/img/luki-vid.png" alt="">
+                                <a href="https://www.youtube.com/watch?v=LqfTkues4vg" target="_blank">
+                                    <img class="card__image" src="assets/img/creators-vids/LHDA-vid.jpg" alt="LDHA video">
                                 </a>
                             </div>
-                            <img class="card__logo" src="assets/img/Luki.png" alt="Luki-logo">
+                            <img class="card__logo" src="assets/img/creators-vids/LHDA-pic.jpg" alt="LDHA Logo">
                             <div class="card__text">
-                                <h4 class="card__title">&#64;Luki_klk</h4>
-                                <p class="card__description">97.176 vistas</p>
+                                <h4 class="card__title">&#64;LDHA</h4>
+                                <p class="card__description">237.845 vistas</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
                             <div>
-                                <a href="" target="_blank">
-                                    <img class="card__image" src="assets/img/luki-vid.png" alt="">
+                                <a href="https://www.youtube.com/watch?v=6Lj-fXDtXf0" target="_blank">
+                                    <img class="card__image" src="assets/img/creators-vids/Farfadox-vid.jpg" alt="Farfadox video">
                                 </a>
                             </div>
-                            <img class="card__logo" src="assets/img/Luki.png" alt="Luki-logo">
+                            <img class="card__logo" src="assets/img/creators-vids/Farfadox-pic.jpg" alt="Farfadox Logo">
                             <div class="card__text">
-                                <h4 class="card__title">&#64;Luki_klk</h4>
-                                <p class="card__description">97.176 vistas</p>
+                                <h4 class="card__title">&#64;Farfadox</h4>
+                                <p class="card__description">541.453 vistas</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
                             <div>
-                                <a href="" target="_blank">
-                                    <img class="card__image" src="assets/img/luki-vid.png" alt="">
+                                <a href="https://www.youtube.com/watch?v=R3RYsX_rOIc&t=1s" target="_blank">
+                                    <img class="card__image" src="assets/img/creators-vids/Crisgreen-vid.jpg" alt="Crisgreen video">
                                 </a>
                             </div>
-                            <img class="card__logo" src="assets/img/Luki.png" alt="Luki-logo">
+                            <img class="card__logo" src="assets/img/creators-vids/Crisgreen-pic.jpg" alt="Crisgreen">
                             <div class="card__text">
-                                <h4 class="card__title">&#64;Luki_klk</h4>
-                                <p class="card__description">97.176 vistas</p>
+                                <h4 class="card__title">&#64;CrisGreen</h4>
+                                <p class="card__description">182.937 vistas</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="card">
                             <div>
-                                <a href="" target="_blank">
-                                    <img class="card__image" src="assets/img/luki-vid.png" alt="">
+                                <a href="https://www.youtube.com/watch?v=LrX3FUtGY_0&t=1s" target="_blank">
+                                    <img class="card__image" src="assets/img/creators-vids/Luis_san-vid.jpg" alt="Luis San video">
                                 </a>
                             </div>
-                            <img class="card__logo" src="assets/img/Luki.png" alt="Luki-logo">
+                            <img class="card__logo" src="assets/img/Creators-vids/Luis_san-logo.jpg" alt="Luis San Logo">
                             <div class="card__text">
-                                <h4 class="card__title">&#64;Luki_klk</h4>
-                                <p class="card__description">97.176 vistas</p>
+                                <h4 class="card__title">&#64;Luis San</h4>
+                                <p class="card__description">304.374 vistas</p>
                             </div>
                         </div>
                     </div>
@@ -459,7 +495,7 @@
 
                 <div class="gallery js-flickity">
                     <div class="gallery-cell"><img src="assets/img/gallery/AGS.png" alt="Argentina Game Show"></div>
-                    <div class="gallery-cell"><img src="assets/img/gallery/HERO ANIME.png" alt="Hero Anime Café"></div>
+                    <div class="gallery-cell"><img src="assets/img/gallery/HERO-ANIME.png" alt="Hero Anime Café"></div>
                     <div class="gallery-cell"><img src="assets/img/gallery/CC.png" alt="Comic Con"></div>
                 </div>
 
@@ -473,62 +509,62 @@
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                         </div>
                     </div>
@@ -579,62 +615,62 @@
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                             <div class="box-ribbon"><img
                                     src="assets/img/ribbon/hand.png"
                                     alt="" class="img-text services"></div><img
-                                src="assets/img/ribbon/MAS DE NOSOTROS.svg"
+                                src="assets/img/ribbon/mas-de-nosotros.svg"
                                 loading="lazy" alt="" class="image-9">
                         </div>
                     </div>
@@ -671,7 +707,7 @@
                     </div>
                     <div class="form__inputs-group">
                         <input type="text" placeholder="Nombre" id="name" name="name">
-                        <input type="email" placeholder="Email" id="email-contact" name="email-contact" required>
+                        <input type="email" placeholder="Email" id="email-contact" name="email-contact">
                     </div>
 
                     <div class="form__inputs-group">
@@ -690,9 +726,9 @@
                                 d="M19.5 0C23.8991 11.5352 27.4648 15.1013 39 19.5C27.4648 23.899 23.8991 27.4648 19.5 39C15.1011 27.4648 11.5352 23.899 0 19.5C11.5352 15.1013 15.1011 11.5352 19.5 0Z"
                                 fill="#BCA3FF" />
                         </svg>
-                        <button id="contact-form-button" class="btn" type="submit"  data-callback="onSubmitAllData" data-size="invisible"
-                        id="contact-form-button"><span class="btn-span">Contactanos</span><img
-                                src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" height="62" width="62"></button>
+                        <button id="mail-form-button" class="btn button h-captcha" type="submit" data-callback="onSubmitAllData" data-size="invisible"
+                            data-sitekey="30000000-ffff-ffff-ffff-000000000001"><span class="btn-span">Contactanos</span><img
+                                src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" alt="Check" height="62" width="62"></button>
                         <svg width="25" height="25" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M19.5 0C23.8991 11.5352 27.4648 15.1013 39 19.5C27.4648 23.899 23.8991 27.4648 19.5 39C15.1011 27.4648 11.5352 23.899 0 19.5C11.5352 15.1013 15.1011 11.5352 19.5 0Z"
@@ -779,26 +815,25 @@
     </div>
 
 
-    <!-- <?php
+    <?php
     require('assets/backend/util.php');
-    ?> -->
+    ?>
 
-
-    <!-- <script src="./js/sweetalert2.all.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js" integrity="sha512-pY1t/ADgTwbfGbw0+mRGd33EroA5YgRUWhQNFpPIAdBzyoSb38FsFrf4wBTcS3GFPdTfgtpRrbGCkdl2C2OXYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/sweetalert2.all.min.js"></script>
     <script src="assets//js/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="assets/js/swiper.js"></script>
-    <script src="assets//js/util.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/js/script.js"></script>
-
-
-    <!-- <script>
+    <script src="assets/js/util.js"></script>
+    <script>
         function onSubmitMailOnly(token) {
             let data = {
                 "contactForm": "false",
                 "mail": getValueOfElementById("email"),
                 "captcha": token,
+                "lang": "<?php echo $lang; ?>"
             }
 
             waitMessage();
@@ -811,8 +846,9 @@
                 "contactForm": "true",
                 "name": getValueOfElementById("name"),
                 "mail": getValueOfElementById("email-contact"),
-                "information": getValueOfElementById("information"),
+                "information": getValueOfElementById("message"),
                 "captcha": token,
+                "lang": "<?php echo $lang; ?>"
             }
 
             waitMessage();
@@ -822,33 +858,33 @@
 
         function sendForm(data) {
             $.ajax({
-                url: "./backend/forms-handler.php",
+                url: "./assets/backend/forms-handler.php",
                 type: "POST",
                 data: data,
                 complete: function(response) {
                     let code = response.responseJSON.code;
 
                     if (code == 0) {
-                        <?php successForm(false) ?>
+                        <?php successForm(false, $lang) ?>
                         return;
                     }
 
                     if (code == 1) {
-                        <?php invalidCaptcha(false) ?>
+                        <?php invalidCaptcha(false, $lang) ?>
                         return;
                     }
 
                     if (code == 2) {
-                        <?php invalidEmail(false) ?>
+                        <?php invalidEmail(false, $lang) ?>
                         return;
                     }
 
                     if (code == 3) {
-                        <?php invalidData(false) ?>
+                        <?php invalidData(false, $lang) ?>
                         return;
                     }
 
-                    <?php unknownError(false) ?>
+                    <?php unknownError(false, $lang) ?>
                     return;
                 }
             });
@@ -870,7 +906,7 @@
                 }
             })
         }
-    </script> -->
+    </script>
 
 </body>
 

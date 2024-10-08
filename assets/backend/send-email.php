@@ -10,7 +10,13 @@
 	require './PHPMailer/PHPMailer.php';
 	require './PHPMailer/SMTP.php';
 
-	function sendMailAllData($name, $email, $information) {
+	function sendMailAllData($name, $email, $information, $lang) {
+
+		if ($lang == "es") {
+			$contact_lang = "Español";
+		} else {
+			$contact_lang = "Ingles";
+		}
 		
 		//Create an instance; passing `true` enables exceptions
 		$mail = new PHPMailer(true);
@@ -27,15 +33,12 @@
 			$mail->Port       = 25;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS` (default: 465)
 
 			//Recipients
-			// $mail->setFrom('web@hashratestudios.com', 'HASHRATE STUDIOS');
-			// $mail->setFrom('web@localhost/hashrate/', 'HASHRATE AGENCY');
-			$mail->setFrom('http://127.0.0.1:5500/index.html', 'HASHRATE AGENCY');
-			// $mail->addAddress('hi@hashratestudios.com');     //Add a recipient
-			$mail->addAddress('jonathanandueza1201@gmail.com');     //Add a recipient
+			$mail->setFrom('web@hashratestudios.com', 'HASHRATE STUDIOS');
+			$mail->addAddress('hi@hashratestudios.com');     //Add a recipient
 
 			//Content
 			$mail->isHTML(true);                                  //Set email format to HTML
-			$mail->Subject = "Acaban de contactar con HASHRATE AGENCY";
+			$mail->Subject = "Acaban de contactar con HASHRATE STUDIOS";
 			$mail->Body    = "
 				<html>
 					<head>
@@ -52,10 +55,12 @@
 						<li><b>Dirección de correo electrónico 📬:</b> $email</li>
 						<br>
 						<li><b>Información de contacto ✍️:</b> $information</li>
+						<br>
+						<li><b>Idioma de contacto 🏳️:</b> $contact_lang</li>
 					</body>
 				</html>
 			";
-			$mail->AltBody = "Nombre: $name - Dirección de correo electrónico: $email - Información de contacto: $information";
+			$mail->AltBody = "Nombre: $name - Dirección de correo electrónico: $email - Información de contacto: $information - Idioma de contacto: $contact_lang";
 
 			$mail->send();
 			//echo 'Message has been sent';
@@ -66,7 +71,13 @@
 		}
 	}
 
-	function sendMailEmailOnly($email) {
+	function sendMailEmailOnly($email, $lang) {
+
+		if ($lang == "es") {
+			$contact_lang = "Español";
+		} else {
+			$contact_lang = "Ingles";
+		}
 		
 		//Create an instance; passing `true` enables exceptions
 		$mail = new PHPMailer(true);
@@ -83,11 +94,8 @@
 			$mail->Port       = 25;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS` (default: 465)
 
 			//Recipients
-			// $mail->setFrom('web@hashratestudios.com', 'HASHRATE STUDIOS');
-			// $mail->setFrom('web@localhost/hashrate/', 'HASHRATE AGENCY');
-			$mail->setFrom('http://127.0.0.1:5500/index.html', 'HASHRATE AGENCY');
-			// $mail->addAddress('hi@hashratestudios.com');     //Add a recipient
-			$mail->addAddress('jonathanandueza1201@gmail.com');     //Add a recipient
+			$mail->setFrom('web@hashratestudios.com', 'HASHRATE STUDIOS');
+			$mail->addAddress('hi@hashratestudios.com');     //Add a recipient
 
 			//Content
 			$mail->isHTML(true);                                  //Set email format to HTML
@@ -104,10 +112,12 @@
 					</head>
 					<body>
 						<li><b>Dirección de correo electrónico 📬:</b> $email</li>
+						<br>
+						<li><b>Idioma de contacto 🏳️:</b> $contact_lang</li>
 					</body>
 				</html>
 			";
-			$mail->AltBody = "Dirección de correo electrónico: $email";
+			$mail->AltBody = "Dirección de correo electrónico: $email - Idioma de contacto: $contact_lang";
 
 			$mail->send();
 			//echo 'Message has been sent';

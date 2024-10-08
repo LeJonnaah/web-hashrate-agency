@@ -2,12 +2,19 @@
 
 	// Handler para los webhooks de Discord, se encarga de enviar los mensajes.
 
-	function sendWebhookAllData($name, $email, $information) {
+	function sendWebhookAllData($name, $email, $information, $lang) {
+		$webhook_url = "https://discord.com/api/webhooks/934939157657186314/_s6pDlzJN7998vxGuQX4oSKyjinTmTyvFQ6pwkaAk97ekoSmwtXgOb_rxzlfNNgrO_1V";
 
 		//=======================================================================================================
 		// Compose message. You can use Markdown
 		// Message Formatting -- https://discordapp.com/developers/docs/reference#message-formatting
 		//========================================================================================================
+
+		if ($lang == "es") {
+			$contact_lang = "Español :flag_es:";
+		} else {
+			$contact_lang = "Ingles :flag_gb:";
+		}
 
 		$timestamp = date("c", strtotime("now"));
 
@@ -57,6 +64,13 @@
 							"name" => "Datos de contacto especificados ✍️",
 							"value" => "$information",
 							"inline" => false
+						],
+
+						// Field 4
+						[
+							"name" => "Idioma de contacto 🏳️",
+							"value" => "$contact_lang",
+							"inline" => false
 						]
 					]
 				]
@@ -77,7 +91,14 @@
 		curl_close( $ch );
 	}
 
-	function sendWebhookMailOnly($email) {
+	function sendWebhookMailOnly($email, $lang) {
+		$webhook_url = "https://discord.com/api/webhooks/934939157657186314/_s6pDlzJN7998vxGuQX4oSKyjinTmTyvFQ6pwkaAk97ekoSmwtXgOb_rxzlfNNgrO_1V";
+
+		if ($lang == "es") {
+			$contact_lang = "Español :flag_es:";
+		} else {
+			$contact_lang = "Ingles :flag_gb:";
+		}
 
 		//=======================================================================================================
 		// Compose message. You can use Markdown
@@ -117,6 +138,13 @@
 						[
 							"name" => "Dirección de correo electrónico 📬",
 							"value" => "$email",
+							"inline" => true
+						],
+
+						// Field 2
+						[
+							"name" => "Idioma de contacto 🏳️",
+							"value" => "$contact_lang",
 							"inline" => true
 						]
 					]
