@@ -253,7 +253,7 @@ $lang = "es";
                             </div>
                             <img class="card__logo" src="assets/img/creators-vids/Julian_abdala-pic.jpg" alt="Julian Abdala logo">
                             <div class="card__text">
-                                <h4 class="card__title">&#64;Julian</h4>
+                                <h4 class="card__title">&#64;JulianAbdala</h4>
                                 <p class="card__description">830.905 vistas</p>
                             </div>
                         </div>
